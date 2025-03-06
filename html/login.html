@@ -22,8 +22,24 @@
                         <p>Password</p>
                         <input class="field" type="password">
                     </div>
+
+                    <div class="gender-container">
+                        <p>Gender</p>
+
+                        <div class="group-radio-button-container">
+                            <div class="radio-button-container">
+                                <input type="radio" name="gender" id="male">
+                                <label for="male">Male</label>
+                            </div>
+    
+                            <div class="radio-button-container">
+                                <input type="radio" name="gender" id="female">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
         
-                    <button class="login-button">
+                    <button class="login-button" id="login-button">
                         Login
                     </button>
                 </form>
@@ -54,5 +70,7 @@
             </div>
         </div>
     </div>
+    
+    <script src="../js/login.js"></script>
 </body>
 </html>
