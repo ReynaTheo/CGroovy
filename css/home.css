@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: ;
+    background-color: rgb(0, 31, 63);
+}
+
+.container{
+    background-color: rgb(0, 31, 63);
+    display: flex;
+
+}
+
+.playlist-container{   
+    /* background-color: red; */
+    
+    /* background-color: rgb(1, 31, 57); */
+    background-color: #00408c;
+    height: 100vh;
+    width: 230px;
+
+    
+}
+
+.content-playlist{
+    /* background-color:rgb(1, 31, 57); */
+    background-color: #00408c;
+   
+    display: flex;
+    flex-direction: column;
+    padding: 2px 20px;
+    gap: 10px;
+    
+
+}
+.content-playlist img{
+    width: 200px;
+    height: 100px;
+    background: none;
+}
+
+#new-playlist-button{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-playlist{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 5px;
+    padding: 5px 10px;
+    background-color: rgba(1, 45, 88, 0.936);
+    color: rgb(241, 240, 240) ;
+    border: none;
+    border-radius: 6px;
+    
+}
+
+.button-playlist:hover{
+    background-color: lightslategray;
+}
+
+.button-text{
+    background: none;
+}
+
+.home-container{
+    /* margin-left: 230px; */
+    padding: 0;
+    
+}
+
+.tab-container-left{
+    margin-top: 10px;
+    
+    display: flex;
+    flex-direction: row;
+    
+    padding: 4px 50px;
+    gap: 20px;
+}
+
+.tab-button{
+    margin-top: 110px;
+    gap: 5px;
+    padding: 5px 10px;
+    background-color: rgba(1, 45, 88, 0.936);
+    color: rgb(241, 240, 240) ;
+    border: none;
+    border-radius: 4px;
+}
+
+.tab-button:hover{
+    background-color: lightslategray;
+    transition: 0.3s;
+}
