@@ -69,7 +69,7 @@
     background: white; 
     padding: 10px;
     border-radius: 15px;
-    width: 350px; /* Sesuaikan ukuran */
+    width: 350px;  /* Sesuaikan ukuran */
     /* box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); */
     box-shadow:  0px 10px 30px rgba(215, 215, 215, 0.39) ;
     text-align: left;
