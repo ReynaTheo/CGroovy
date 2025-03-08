@@ -154,7 +154,7 @@
 .button-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     background: none;
     width: 100%;
     margin-bottom: 5px;
