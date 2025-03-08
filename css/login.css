@@ -44,7 +44,6 @@
 }
 
 .content-container {
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,11 +56,6 @@
 
 
 .content {
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 40px;
-    margin-top: 20px;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
