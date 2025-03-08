@@ -1,10 +1,9 @@
-* {
+*{
     margin: 0;
     padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
-    background-color: rgb(0, 31, 63);
-    
+    background-color: rgb(0, 31, 63);  
 }
 
 /* body{
@@ -19,8 +18,7 @@
 } */
 
 #logo{
-    background-color: red;
-    
+    background-color: red;  
     width: 280px;
     height: 200px;
     background: none;
@@ -32,38 +30,25 @@
     left: -5px;
 }
 
-
 .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     height: 100vh;
-
 }
 
-.content-container {
+.content-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-    
     max-width: 1600px;
 }
 
-
-.content {
-<<<<<<< HEAD
-=======
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 40px;
-    margin-top: 20px;
-    
->>>>>>> 1cf1358dd14dfe3ab85e32c29ff9166e0623f010
+.content{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,16 +62,13 @@
     background: white; 
     padding: 10px;
     border-radius: 15px;
-    width: 350px; /* Sesuaikan ukuran */
-    /* box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); */
+    width: 350px;
     box-shadow:  0px 10px 30px rgba(215, 215, 215, 0.39) ;
     text-align: left;
     max-height: 600px;
-    
-
 }
 
-.login-form-container {
+.login-form-container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,11 +84,9 @@
     width: 100%;
     gap: 10px;
     background: none;
-
 }
 
-.field-container {
-    
+.field-container{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -118,17 +98,15 @@
     background: none;
     color: black;
     font-size: 18px;
-    
 }
 
-.login-button {
+.login-button{
     padding: 4px 24px;
     background-color: rgb(0, 31, 63);
     border-color: white;
     border-radius: 10px;
     color: white;
     cursor: pointer;
-    
 }
 
 .login-button:hover{
@@ -138,7 +116,7 @@
     transform: 0.2s;
 }
 
-.line-container {
+.line-container{
     display: flex;
     align-items: center;
     text-align: center;
@@ -147,13 +125,13 @@
     background: none;
 }
 
-.line {
+.line{
     flex: 1;
     height: 2px;
     background-color: black;
 }
 
-.button-container {
+.button-container{
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -162,9 +140,7 @@
     margin-bottom: 5px;
 }
 
-
-
-.field {
+.field{
     padding: 6px;
     border-radius: 8px;
     border-width: 0.5px;
@@ -178,6 +154,7 @@
     background: none;
     color: black;
 }
+
 #google{
     width: 20px;
     height: 20px;
@@ -206,8 +183,7 @@
 
 } */
 
-.sign-in-button {
-    
+.sign-in-button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,28 +205,4 @@
 .sign-in-button:hover{
     background-color: #d8ccba ;
     color: rgb(0, 31, 63);
-
-}
-
-
-
-
-
-.gender-container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 8px;
-    width: 100%;
-}
-
-.radio-button-container {
-    display: flex;
-    justify-content: center;
-    gap: 4px;
-}
-
-.group-radio-button-container {
-    display: flex;
-    gap: 24px;
 }

@@ -11,53 +11,73 @@
 
         <div class="content-container">
 
-            <h1>Logo</h1>
-            <form class="register-form-container" action="">
-
-                <div class="field-container">
-                    <p>Username</p>
-                    <input type="text">              
-                </div>
-    
-                <div class="field-container">
-                    <p>Email</p>
-                    <input type="text">              
-                </div>
-    
-                <div class="field-container">
-                    <p>Password</p>
-                    <input type="text">              
-                </div>
-    
-                <div class="field-container">
-                    <p>Age</p>
-                    <input type="text">              
-                </div>
-                
-                <div class="gender-container">
-                    <p>Gender</p>
-                    <div class="group-radio-button-container">
-                        <div class="radio-button-container">
-                            <input type="radio" name="gender" id="male">
-                            <label for="male">Male</label>
+            <div class="content">
+                <img id="logo" src="../assets/logo cgroovy.png" alt="">
+                <form class="register-form-container" action="">
+                    <div class="form-container">
+                        <div class="field-container">
+                            <p class="field-type">Username</p>
+                            <input class="field" type="text">              
                         </div>
-
-                        <div class="radio-button-container">
-                            <input type="radio" name="gender" id="female">
-                            <label for="female">Female</label>
+        
+                        <div class="field-container">
+                            <p class="field-type">Email</p>
+                            <input class="field" type="text">              
+                        </div>
+        
+                        <div class="field-container">
+                            <p class="field-type">Password</p>
+                            <input class="field" type="password">              
+                        </div>
+            
+                        <div class="field-container">
+                            <p class="field-type">Age</p>
+                            <input class="field" type="number">              
                         </div>
                     </div>
+
+                    <div class="gender-container">
+                        <p>Gender</p>
+                        <div class="group-radio-button-container">
+                            <div class="radio-button-container">
+                                <input type="radio" name="gender" id="male">
+                                <label for="male">Male</label>
+                            </div>
+    
+                            <div class="radio-button-container">
+                                <input type="radio" name="gender" id="female">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>         
+                    </div>
+
+                    <button class="register-button" id="register-button">
+                        REGISTER
+                    </button>
+                </form>
+
+                <div class="line-container">
+                    <div class="line"></div>
+                    <div class="text">OR</div>
+                    <div class="line"></div>
                 </div>
 
-                <button>
-                    Register
-                </button>
-                
-            </form>
-            <div class="button-container">
-                <button class="sign-in-button">Sign up with Google</button>
-                <button class="sign-in-button">Sign up with Facebook</button>
-                <button class="sign-in-button">Sign up with Apple</button>
+                <div class="button-container">
+                    <button class="sign-in-button">
+                        <img id="google" src="../assets/logo google.png" alt="">
+                        Sign in with Google    
+                    </button>
+                    
+                    <button class="sign-in-button">
+                        <img id="facebook" src="../assets/logo facebook.png" alt="">
+                        Sign in with Facebook  
+                    </button>
+                    
+                    <button class="sign-in-button">
+                        <img id="apple" src="../assets/logo apple putih.png" alt="">
+                        Sign in with Apple                     
+                    </button>
+                </div>
             </div>
         </div>
     </div>
