@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background-color: rgb(0,31,63);
+}
+
+#foto {
+    width: 100px;
+    height: 100px;
+    background: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    left: -15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    max-width: 1600px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    height: 100vh;
+    width: 100%;
+    max-width: 300px;
+}
+
+.profile-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.field-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profile-button {
+    padding: 4px 24px;
+    background-color: white;
+    border-color: white;
+    border-radius: 10px;
+    color: black;
+}
+
+.profile-button:hover {
+    background-color: rgb(239,232,232)
+}
+
+.field {
+    padding: 4px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: black;
+    background-color: white;
+}
