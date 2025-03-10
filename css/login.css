@@ -48,12 +48,8 @@
     max-width: 1600px;
 }
 
-<<<<<<< HEAD
-.content{
-=======
 
 .content {
->>>>>>> 3137abbe32469b23f28403983c0da4b5b3d58d87
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,12 +63,7 @@
     background: white; 
     padding: 10px;
     border-radius: 15px;
-<<<<<<< HEAD
     width: 350px;
-=======
-    width: 350px;  /* Sesuaikan ukuran */
-    /* box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); */
->>>>>>> 3137abbe32469b23f28403983c0da4b5b3d58d87
     box-shadow:  0px 10px 30px rgba(215, 215, 215, 0.39) ;
     text-align: left;
     max-height: 600px;
