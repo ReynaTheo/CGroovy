@@ -23,6 +23,7 @@ Object.values(errorMessages).forEach(msg => {
     msg.style.color = 'red';
     msg.style.fontSize = '10px';
     msg.style.marginTop = '2px';
+    msg.style.backgroundColor = 'white';
 });
     
 function validateUsername() {
