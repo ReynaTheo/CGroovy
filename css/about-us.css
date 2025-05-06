@@ -6,47 +6,160 @@
     background-color: rgb(0, 31, 63);  
 }
 
-#main-content{
+
+.content-container{
     position: relative;
-    padding: 0px 120px;
+    padding: 0px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  
 }
 
-#history-container{
+.history-container{
     padding: 50px 0px;
+    
+    h1{
+        font-size: 50px;
+    }
 }
 
-#history-cards{
-    margin-top: 30px;
+.history-content{
     display: flex;
-    justify-content: space-between;
-    gap: 25px;
+    justify-content: center;
+}
+
+.history-card-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
 }
 
 .history-cards{
+    background-color: white;
+    color: black;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     border: 1px solid white;
     width: 25%;
-    height: 70vh;
+    min-height: 250px;
     padding: 20px;
     border-radius: 10px;
     transition: 0.3s;
+    box-sizing: border-box;
+    flex: 0 0 22%; /* sekitar 4 card per baris, sisakan gap */
+    min-width: 260px;
+    p{
+        text-align: justify;
+        font-weight: thin;
+        background-color: white;
+        color: black;
+
+    }
+
+    h2{
+        text-align: center;
+        background-color: white;
+        color: black;
+    }
 }
 
-#history1{
-    background-position: center;
-}
-
-#history2{
-    background-position: center;
-}
-
-#history3{
-    background-position: center;
-}
-
-#history4{
-    background-position: center;
-}
 
 .history-cards:hover{
     transform: translateY(-20px);
+}
+
+
+.founder-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    h1{
+        font-size: 50px;
+        padding: 20px;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+.founder-cards {
+    display: flex;
+    background-color: white;
+    color: black;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    gap: 20px;
+    img{
+        width: 150px;
+        height: 200px;
+        display: block;
+
+    }
+
+    h3 {
+        margin: 0;
+        /* font-size: 18px; */
+        font-size: 150%;
+        background-color: #fff;
+        color: black;
+        
+    }
+
+    h4 {
+        margin-top: 5px;
+        /* font-size: 16px; */
+        font-size: 100%;
+        font-weight: normal;
+        background-color: #fff;
+        color: black;
+    }
+
+    ul {
+        padding-left: 20px;
+        background-color: #fff;
+        color: black;
+
+    }
+    
+    li {
+        margin-bottom: 10px;
+        line-height: 1.5;
+        background-color: #fff;
+        color: black;
+        text-align: justify;
+        font-size: 100%;
+    }
+
+}
+
+.card-content{
+    padding: 0px 5px;
+    background-color: white;
+
+}
+
+
+  
+/* Saat layar < 1024px, jadi 2x2 layout */
+@media (max-width: 1024px) {
+    .history-cards {
+        flex: 0 0 48%; /* 2 per baris */
+    }
+}
+
+/* Saat layar < 600px, jadi 1 per baris */
+@media (max-width: 600px) {
+    .history-cards {
+        flex: 0 0 100%;
+    }
 }
