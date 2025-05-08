@@ -1,24 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const usernameInput = document.querySelector('input[type="text"]');
-    const emailInput = document.querySelectorAll('input[type="text"]')[1];
-    const passwordInput = document.querySelector('input[type="password"]');
-    const ageInput = document.querySelector('input[type="number"]');
+    const usernameInput = document.getElementById('username');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const ageInput = document.getElementById('age');
     const genderInputs = document.querySelectorAll('input[name="gender"]');
     const registerButton = document.getElementById('register-button');
     const errorMessages = {
-        username: document.createElement('div'),
-        email: document.createElement('div'),
-        password: document.createElement('div'),
-        age: document.createElement('div'),
-        gender: document.createElement('div')
+        username: document.getElementById('username-error'),
+        email: document.getElementById('email-error'),
+        password: document.getElementById('password-error'),
+        age: document.getElementById('age-error'),
+        gender: document.getElementById('gender-error')
 };
-    
-usernameInput.parentNode.appendChild(errorMessages.username);
-emailInput.parentNode.appendChild(errorMessages.email);
-passwordInput.parentNode.appendChild(errorMessages.password);
-ageInput.parentNode.appendChild(errorMessages.age);
-document.querySelector('.gender-container').appendChild(errorMessages.gender);
-    
+       
 Object.values(errorMessages).forEach(msg => {
     msg.style.color = 'red';
     msg.style.fontSize = '10px';
@@ -108,6 +102,11 @@ registerButton.addEventListener('click', function(e) {
         
     if (isUsernameValid && isEmailValid && isPasswordValid && isAgeValid && isGenderValid) {
         alert('Registrasi berhasil!');
-        document.querySelector('.register-form-container').submit();
+        
+        setTimeout(() => {
+            window.location.href = 'home.html';
+        }, 1000);
+    } else {
+        alert('Registrasi gagal! Silakan periksa kembali data Anda.');
     }
 });});
