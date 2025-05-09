@@ -1,0 +1,173 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(0, 31, 63);
+}
+
+body{
+    background-color: rgb(0, 31, 63);
+    color: #fff;
+}
+
+.container{
+    background-color: rgb(0, 31, 63);
+    display: flex;
+
+}
+
+/* SIDEBAR PLAYLIST */
+.playlist-container{   
+    background-color: #00408c;
+    height: 100vh;
+    /* width: 230px; */
+
+    
+}
+
+.content-playlist{
+    /* background-color:rgb(1, 31, 57); */
+    background-color: #00408c;
+   
+    display: flex;
+    flex-direction: column;
+    /* padding: 2px 20px;
+    gap: 10px; */
+
+    /* perbaikan */
+    padding: 0.5rem 1rem;
+    gap: 0.75rem;
+    /* . */
+    
+    img{
+        /* margin-left: -20px;
+        width: 200px;
+        height: 100px;
+        background: none; */
+
+        /* perbaikan */
+        width: 100%;
+        height: auto;
+        max-height: 6rem;
+        object-fit: cover;
+        background: none ;
+        /* . */
+    }
+
+}
+
+/* BUTTON PLAYLIST */
+#new-playlist-button{
+    /* margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; */
+
+    /* perbaikan */
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* . */
+}
+
+.button-playlist{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 5px;
+    padding: 5px 10px;
+    background-color: rgba(1, 45, 88, 0.936);
+    color: rgb(241, 240, 240) ;
+    border: none;
+    border-radius: 6px;
+    
+}
+
+.button-playlist:hover{
+    background-color: lightslategray;
+}
+
+.button-text{
+    background: none;
+}
+
+.home-container{
+    /* margin-left: 230px; */
+    width: 100%;
+    padding: 0;
+    
+}
+.nav-bar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+
+}
+
+.tab-container-left{
+    margin-top: 10px;
+    
+    display: flex;
+    flex-direction: row;
+
+    padding: 4px 50px;
+    gap: 20px;
+}
+
+.tab-container-right{
+    display: flex;
+    align-items: center;
+    .search {
+        display: flex;
+        align-items: center;
+      }
+    
+      .search input[type="text"] {
+        padding: 8px;
+        font-size: 14px;
+      }
+    
+      .search button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+      }
+    
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      input{
+        background-color: #fff;
+        border: none;
+        border-radius: 5px;
+      }
+
+}
+
+.tab-button{
+    margin-top: 10px;
+    gap: 5px;
+    padding: 10px 30px;
+    /* background-color: rgba(1, 45, 88, 0.936); */
+    background-color: rgb(241, 240, 240) ;;
+    /* color: rgb(241, 240, 240) ; */
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.tab-button:hover{
+    background-color: lightslategray;
+    transition: 0.3s;
+}
+
+
