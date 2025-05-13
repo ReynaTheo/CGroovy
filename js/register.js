@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
     const ageInput = document.getElementById('age');
-    const genderInputs = document.querySelectorAll('input[name="gender"]');
+    const genderInput = document.querySelectorAll('input[name="gender"]');
     const registerButton = document.getElementById('register-button');
     const errorMessages = {
         username: document.getElementById('username-error'),
@@ -22,7 +22,7 @@ Object.values(errorMessages).forEach(msg => {
     
 function validateUsername() {
     if (usernameInput.value.trim() === '') {
-        errorMessages.username.textContent = 'Username tidak boleh kosong!';
+        errorMessages.username.textContent = 'Username cannot be empty!';
         return false;
     } else {
         errorMessages.username.textContent = '';
@@ -32,7 +32,7 @@ function validateUsername() {
     
 function validateEmail() {
     if (!emailInput.value.endsWith('.com')) {
-        errorMessages.email.textContent = 'Email harus diakhiri dengan .com!';
+        errorMessages.email.textContent = 'Email must end with .com!';
         return false;
     } else {
         errorMessages.email.textContent = '';
@@ -42,10 +42,10 @@ function validateEmail() {
     
 function validatePassword() {
     if (passwordInput.value.length < 8) {
-        errorMessages.password.textContent = 'Password minimal 8 karakter!';
+        errorMessages.password.textContent = 'Password must be at least 8 characters!';
         return false;
     } else if (!/[A-Z]/.test(passwordInput.value.charAt(0))) {
-        errorMessages.password.textContent = 'Password harus diawali huruf kapital!';
+        errorMessages.password.textContent = 'Password must start with a capital letter!';
         return false;
     } else {
         errorMessages.password.textContent = '';
@@ -56,7 +56,7 @@ function validatePassword() {
 function validateAge() {
     const age = parseInt(ageInput.value);
     if (isNaN(age) || age < 0 || !Number.isInteger(age)) {
-        errorMessages.age.textContent = 'Age harus bilangan bulat positif!';
+        errorMessages.age.textContent = 'Age must be a positive integer!';
         return false;
     } else {
         errorMessages.age.textContent = '';
@@ -65,9 +65,9 @@ function validateAge() {
 }
     
 function validateGender() {
-    const isSelected = Array.from(genderInputs).some(input => input.checked);
+    const isSelected = Array.from(genderInput).some(input => input.checked);
     if (!isSelected) {
-        errorMessages.gender.textContent = 'Pilih salah satu gender!';
+        errorMessages.gender.textContent = 'Choose one gender!';
         return false;
     } else {
         errorMessages.gender.textContent = '';
@@ -87,7 +87,7 @@ passwordInput.addEventListener('blur', validatePassword);
 ageInput.addEventListener('input', validateAge);
 ageInput.addEventListener('blur', validateAge);
     
-genderInputs.forEach(input => {
+genderInput.forEach(input => {
     input.addEventListener('change', validateGender);
 });
     
@@ -101,12 +101,12 @@ registerButton.addEventListener('click', function(e) {
     const isGenderValid = validateGender();
         
     if (isUsernameValid && isEmailValid && isPasswordValid && isAgeValid && isGenderValid) {
-        alert('Registrasi berhasil!');
+        alert('Registration Successful!');
         
         setTimeout(() => {
             window.location.href = 'home.html';
         }, 1000);
     } else {
-        alert('Registrasi gagal! Silakan periksa kembali data Anda.');
+        alert('Registration Failed! Please check your data again.');
     }
 });});

@@ -6,7 +6,7 @@
     background-color: rgb(0, 31, 63);  
 }
 
-nav {
+nav{
     background: #edf1f6;
     padding: 20px 20px;
     display: flex;
@@ -14,7 +14,7 @@ nav {
     gap: 60px;
 }
 
-nav a {
+nav a{
     color: black;
     background-color: #edf1f6;
     text-decoration: none;
@@ -24,17 +24,15 @@ nav a {
     padding: 10px;
 }
 
-nav a.active {
+nav a.active{
     background: #e74c3c;
     border-radius: 5px;
-    
 }
 
-nav a:hover {
+nav a:hover{
     background: rgb(0, 31, 63);
     border-radius: 5px;
     color: white;
-    
 }
 
 .content-container{
@@ -42,12 +40,10 @@ nav a:hover {
     padding: 0px 20px;
     max-width: 1200px;
     margin: 0 auto;
-  
 }
 
 .history-container{
     padding: 50px 0px;
-    
     h1{
         font-size: 50px;
     }
@@ -63,7 +59,6 @@ nav a:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-
 }
 
 .history-cards{
@@ -80,14 +75,13 @@ nav a:hover {
     border-radius: 10px;
     transition: 0.3s;
     box-sizing: border-box;
-    flex: 0 0 22%; /* sekitar 4 card per baris, sisakan gap */
+    flex: 0 0 22%;
     min-width: 260px;
     p{
         text-align: justify;
         font-weight: thin;
         background-color: white;
         color: black;
-
     }
 
     h2{
@@ -97,31 +91,25 @@ nav a:hover {
     }
 }
 
-
 .history-cards:hover{
     transform: translateY(-20px);
 }
 
-
 .founder-container{
     max-width: 1200px;
     margin: 0 auto;
-
-    
     h1{
         font-size: 50px;
         padding: 20px;
     }
 }
 
-h1 {
+h1{
     text-align: center;
     margin-bottom: 30px;
 }
 
-
-
-.founder-cards {
+.founder-cards{
     display: flex;
     background-color: white;
     color: black;
@@ -134,68 +122,58 @@ h1 {
         width: 150px;
         height: 200px;
         display: block;
-
     }
 
-    h3 {
-        margin: 0;
-        /* font-size: 18px; */
+    h3{
         font-size: 150%;
-        background-color: #fff;
+        background-color: white;
         color: black;
-        
     }
 
-    h4 {
+    h4{
         margin-top: 5px;
-        /* font-size: 16px; */
         font-size: 100%;
         font-weight: normal;
-        background-color: #fff;
+        background-color: white;
         color: black;
     }
 
-    ul {
+    ul{
         padding-left: 20px;
-        background-color: #fff;
+        background-color: white;
         color: black;
-
     }
     
-    li {
+    li{
         margin-bottom: 10px;
         line-height: 1.5;
-        background-color: #fff;
+        background-color: white;
         color: black;
         text-align: justify;
         font-size: 100%;
     }
-
 }
 
 .card-content{
     padding: 0px 5px;
     background-color: white;
-    
 }
 
 footer{
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
 }
   
-/* Saat layar < 1024px, jadi 2x2 layout */
-@media (max-width: 1024px) {
+@media (max-width: 1024px){
     .history-cards {
-        flex: 0 0 48%; /* 2 per baris */
+        flex: 0 0 48%;
     }
 }
 
-/* Saat layar < 600px, jadi 1 per baris */
-@media (max-width: 600px) {
+@media (max-width: 600px){
     .history-cards {
         flex: 0 0 100%;
     }
