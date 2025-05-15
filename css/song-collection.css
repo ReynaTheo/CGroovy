@@ -71,6 +71,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .tab-container-left{
@@ -122,6 +123,7 @@ body{
     border: none;
     border-radius: 10px;
     font-size: 15px;
+    font-weight: bold;
 }
 
 .tab-button:hover{
@@ -199,7 +201,7 @@ body{
     background-color: #1ed760;
 }
 
-.albums-grid{
+.album-grid{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 25px;
@@ -237,6 +239,13 @@ body{
 }
 
 .album-artist{
+    background-color: white;
+    color: #333;
+    font-size: 0.8rem;
+    padding: 0 10px 10px;
+}
+
+.album-explanation{
     background-color: white;
     color: #333;
     font-size: 0.8rem;

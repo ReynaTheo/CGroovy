@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function(){
     const usernameInput = document.getElementById('username');
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
@@ -20,56 +20,56 @@ Object.values(errorMessages).forEach(msg => {
     msg.style.backgroundColor = 'white';
 });
     
-function validateUsername() {
-    if (usernameInput.value.trim() === '') {
+function validateUsername(){
+    if(usernameInput.value.trim() === ''){
         errorMessages.username.textContent = 'Username cannot be empty!';
         return false;
-    } else {
+    }else{
         errorMessages.username.textContent = '';
         return true;
     }
 }
     
-function validateEmail() {
-    if (!emailInput.value.endsWith('.com')) {
+function validateEmail(){
+    if(!emailInput.value.endsWith('.com')){
         errorMessages.email.textContent = 'Email must end with .com!';
         return false;
-    } else {
+    }else{
         errorMessages.email.textContent = '';
         return true;
     }
 }
     
-function validatePassword() {
-    if (passwordInput.value.length < 8) {
+function validatePassword(){
+    if(passwordInput.value.length < 8){
         errorMessages.password.textContent = 'Password must be at least 8 characters!';
         return false;
-    } else if (!/[A-Z]/.test(passwordInput.value.charAt(0))) {
+    }else if(!/[A-Z]/.test(passwordInput.value.charAt(0))){
         errorMessages.password.textContent = 'Password must start with a capital letter!';
         return false;
-    } else {
+    }else{
         errorMessages.password.textContent = '';
         return true;
     }
 }
     
-function validateAge() {
+function validateAge(){
     const age = parseInt(ageInput.value);
-    if (isNaN(age) || age < 0 || !Number.isInteger(age)) {
+    if(isNaN(age) || age < 0 || !Number.isInteger(age)){
         errorMessages.age.textContent = 'Age must be a positive integer!';
         return false;
-    } else {
+    }else{
         errorMessages.age.textContent = '';
         return true;
     }
 }
     
-function validateGender() {
+function validateGender(){
     const isSelected = Array.from(genderInput).some(input => input.checked);
-    if (!isSelected) {
+    if(!isSelected){
         errorMessages.gender.textContent = 'Choose one gender!';
         return false;
-    } else {
+    }else{
         errorMessages.gender.textContent = '';
         return true;
     }
@@ -91,7 +91,7 @@ genderInput.forEach(input => {
     input.addEventListener('change', validateGender);
 });
     
-registerButton.addEventListener('click', function(e) {
+registerButton.addEventListener('click', function(e){
     e.preventDefault();
         
     const isUsernameValid = validateUsername();
@@ -100,13 +100,13 @@ registerButton.addEventListener('click', function(e) {
     const isAgeValid = validateAge();
     const isGenderValid = validateGender();
         
-    if (isUsernameValid && isEmailValid && isPasswordValid && isAgeValid && isGenderValid) {
+    if(isUsernameValid && isEmailValid && isPasswordValid && isAgeValid && isGenderValid){
         alert('Registration Successful!');
         
         setTimeout(() => {
             window.location.href = 'home.html';
         }, 1000);
-    } else {
+    }else{
         alert('Registration Failed! Please check your data again.');
     }
 });});

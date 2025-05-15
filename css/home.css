@@ -71,6 +71,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .tab-container-left{
@@ -113,6 +114,18 @@ body{
     }
 }
 
+.nav-bar-genre{
+    width: 100%;
+    padding: 0 50px;
+    margin-top: 30px;
+}
+
+.nav-bar-genre-content{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap
+}
+
 .tab-button{
     margin-top: 10px;
     gap: 5px;
@@ -122,10 +135,96 @@ body{
     border: none;
     border-radius: 10px;
     font-size: 15px;
+    font-weight: bold;
 }
 
 .tab-button:hover{
     background-color: #00408c;
     color: white;
     transition: 0.3s;
+}
+
+.genre-button{
+    margin-top: 10px;
+    gap: 5px;
+    padding: 10px 30px;
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.genre-button:hover{
+    background-color: white;
+    color: #1DB954;
+    transition: 0.3s;
+}
+
+.music-container{
+    padding: 20px 50px;
+    background-color: rgb(0, 31, 63);
+}
+
+.album-container{
+    margin-bottom: 40px;
+}
+
+.album-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.album-container-title{
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.album-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+}
+
+.album-card{
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.album-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.album-cover{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.album-title{
+    background-color: white;
+    font-weight: bold;
+    margin: 15px 0 5px;
+    color: #333;
+    font-size: 1rem;
+    padding: 0 10px;
+}
+
+.album-artist{
+    background-color: white;
+    color: #333;
+    font-size: 0.8rem;
+    padding: 0 10px 10px;
 }
