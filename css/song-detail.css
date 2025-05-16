@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(0, 31, 63);
+}
+
+body{
+    background-color: rgb(0, 31, 63);
+    color: white;
+    /* TAMBAHAN */
+    width: 100%;
+    overflow-x: hidden;
+    min-width: 1024px;
+    /* TAMBAHAN */
+    
+}
+
+.container{
+    background-color: rgb(0, 31, 63);
+     /* TAMBAHAN */
+    width: 100%;
+     /* TAMBAHAN */
+    display: flex;
+    min-height: 100vh;
+
+}
+
+.playlist-container{   
+    background-color: #00408c;
+}
+
+.content-playlist{
+    background-color: #00408c;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    gap: 0.75rem;  
+    img{
+        width: 100%;
+        height: auto;
+        max-height: 6rem;
+        object-fit: cover;
+        background: none ;
+    }
+}
+
+#new-playlist-button{
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-playlist{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 5px 10px;
+    background-color: rgba(1, 45, 88, 0.936);
+    color: rgb(239, 232, 232);
+    border: none;
+    border-radius: 6px; 
+}
+
+.button-playlist:hover{
+    background-color: lightslategray;
+}
+
+.button-text{
+    background: none;
+}
+
+.home-container{
+    width: 100%;
+}
+.nav-bar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.tab-container-left{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 4px 50px;
+    gap: 20px;
+}
+
+.tab-container-right{
+    display: flex;
+    align-items: center;
+    .search{
+        display: flex;
+        align-items: center;
+    }
+    
+    .search input[type="text"]{
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .search button{
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+    }
+    
+    img{
+        width: 40px;
+        height: 40px;
+    }
+
+    input{
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+    }
+}
+
+
+
+.tab-button{
+    margin-top: 10px;
+    gap: 5px;
+    padding: 10px 30px;
+    background-color: rgb(239, 232, 232);
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.tab-button:hover{
+    background-color: #00408c;
+    color: white;
+    transition: 0.3s;
+}
+
+.panah-kiri{
+        width: 50px;
+        height: 50px;
+        margin: 0 50px;
+}
+
+/* SONG DETAIL */
+.song-detail-container{
+    /* padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    overflow-y: auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto; */
+
+    /* display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px; 
+    max-width: 1200px; 
+    margin: 0 auto; */
+
+    /* display: flex; /* atau grid */
+    flex-direction: column;
+    width: 100%;
+    max-width: 1400px;   /* batas maksimum lebar */
+    margin: 0 auto;      /* biar tetap center */
+    padding: 40px 60px;  
+    box-sizing: border-box;
+    gap: 40px;
+    min-height: 100vh; */
+    
+   
+   
+}
+
+/* TOP SIDE*/
+.song-content-top{
+    display: flex;
+    gap: 60px;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    align-items: flex-start;
+}
+
+/* LEFT */
+.left-detail{
+    flex: 1;
+    max-width: 400px;
+
+    .cover-image{
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+
+    h2{
+        text-align: center;
+        margin: 10px 0 5px;
+        font-size: 30px;
+    }
+
+    p{
+        margin: 6px 0;
+        font-size: 30px;
+        color: #bbb;
+    }
+   
+}
+
+/* LINE */
+.line-container{
+    margin: 15px 0;
+}
+
+.line{
+    flex: 1;
+    height: 1px;
+    background-color: white;
+}
+
+/* RIGHT  */
+.right-detail{
+    flex: 2;
+    
+    h3{
+        font-size: 50px;
+        /* text-align: center; */
+        margin-bottom: 20px;
+    }
+
+}
+
+.lyrics{
+    max-height: 600px;
+    
+    overflow-y: auto;
+    padding-right: 10px;
+
+    p{
+        margin-bottom: 8px;
+        font-size: 30px;
+        color: #ddd;
+        line-height: 1.6;
+    }
+}
+.lyrics::-webkit-scrollbar {
+  width: 6px;
+}
+
+.lyrics::-webkit-scrollbar-track {
+  background: gray;
+  border-radius: 10px;
+  opacity: 30%;
+}
+
+.lyrics::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.lyrics::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.song-content-bottom{
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+}
+
+.audio{
+    width: 100%;
+    max-width: 1400px; /* atau sama dengan song-detail-container */
+    margin: 0 auto;     /* supaya center */
+    box-sizing: border-box;
+}
+
+audio{
+    width: 100%;
+    margin-top: 20px;
+    
+}
+
+.left-detail, .right-detail {
+    flex: 1;
+    min-width: 300px;
+    max-width: 100%;
+}
+
