@@ -162,6 +162,7 @@ body{
 /* TOP SIDE*/
 .song-content-top{
     display: flex;
+    flex-wrap: wrap;
     gap: 60px;
     width: 100%;
     align-items: flex-start;
@@ -270,3 +271,23 @@ audio{
     max-width: 100%;
 }
 
+@media (max-width: 1024px) {
+  .song-content-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-detail,
+  .right-detail {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .right-detail {
+    margin-top: 20px;
+  }
+
+  .lyrics {
+    max-height: none; /* biar tidak kepotong di layar kecil */
+  }
+}
