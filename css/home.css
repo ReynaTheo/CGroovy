@@ -9,9 +9,6 @@
 body{
     background-color: rgb(0, 31, 63);
     color: white;
-    
-    
-   
 }
 
 .container{
@@ -132,7 +129,7 @@ body{
 }
 .nav-bar-container{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 100%;
    
     margin-bottom: 30px;
@@ -295,7 +292,7 @@ body{
 
 .album-container-title{
     /* font-size: 2rem; */
-    font-size: clamp(1rem, calc(7vw + 1rem), 3rem);
+    font-size: clamp(1rem, calc(7vw + 1rem), 2rem);
     color: white;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -413,12 +410,13 @@ body{
     border: 1px solid  gray;
     border-radius: 20px ;
     margin-bottom: 30px;
-    
+    background-color: white ;
     
     p{
     
         font-size: clamp(1rem, calc(7vw + 1rem), 1.5rem);
-    
+        background-color: white;
+        color: black;
         padding: 5px;
         
     }
@@ -429,15 +427,6 @@ body{
     }
 }
 
-.song-item:hover{
-    background-color: white ;
-    color: rgb(0, 31, 63);
-
-    p{
-        background-color: white;
-        color:rgb(0, 31, 63);
-    }
-}
 
 /* @media (max-width: 768px) {
   .container {
