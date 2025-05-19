@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C'Groovy</title>
-    <link rel="stylesheet" href="../css/song-detail.css">
+    <title>Song Detail</title>
+    <link rel="stylesheet" href="../css/song-detail-revisi.css">
 </head>
 <body>
     <div class="container">
+        <header>
+            <img src="../assets/cgroovy.png" alt="">
+                <div class="header-content">
+                    <button class="menu-toggle">☰</button>
+                    <nav>
+                        <a href="home.html">Home</a>
+                        <a href="song-collection.html">Song Collection</a>
+                        <a href="about-us-revisi.html">About Us</a>
+                    </nav>    
+                </div>    
+        </header>
+        
+        <!-- PLAYLIST -->
         <div class="playlist-container">
             <div class="content-playlist">
-                <img src="../assets/cgroovy.png" alt="">
                 <button class="button-playlist" id="new-playlist-button">+ New Playlist</button>
                 <button class="button-playlist">
                     <p class="button-text">Kpop's</p>
@@ -52,39 +64,18 @@
                  </button>
             </div>
         </div>
-        
-        <div class="home-container">  
-            <div class="nav-bar-container">
-                <div class="tab-container-left">
-                    <a href="home.html">
-                        <button class="tab-button">Home</button>
-                    </a>
-                    <a href="song-collection.html">
-                        <button class="tab-button">Song Collection</button>
-                    </a>
-                    <a href="about-us.html">
-                        <button class="tab-button">About Us</button>
-                    </a>
-                </div>
 
-                <div class="tab-container-right">
-                    <form class="search" action="#">
-                        <input type="text" name="search" placeholder="Search..">
-                        <button type="submit">
-                            <img src="../assets/search.png" alt="search-icon">
-                        </button>
-                    </form>
-                </div>
-            </div>   
-            
+        <!-- MAIN -->
+        <div class="home-container">  
+                
             <img  class="panah-kiri" src="../assets/icon kiri.png" alt="" onclick="goBack()">
             <div class="song-detail-container">
                 <div class="song-content-top">
                     <!-- LEFT SIDE SONG DETAIL -->
                     <div class="left-detail">
-                        <img src="../assets/Cover Music/Pop/She Will be Loved cover.png" alt="Song Cover" class="cover-image">
-                        <h2>She Will Be Loved</h2>
-                            <p>Maroon 5</p>
+                            <img src="../assets/Cover Music/Pop/She Will be Loved cover.png" alt="Song Cover" class="cover-image">
+                            <h2>She Will Be Loved</h2>
+                                <p>Maroon 5</p>
                                 <div class="line-container">
                                     <div class="line"></div>
                                 </div>
@@ -165,8 +156,11 @@
                     </div>
                 </div>
             </div>           
+            </div>   
+            
         </div>
     </div>
     <script src="../js/song-detail.js"></script>
+    </div>   
 </body>
 </html>
