@@ -21,7 +21,8 @@ body{
 }
 .header-left{
     display: flex;
-    gap: 20px;
+    gap: 100px;
+    padding: 0 20px;
     background-color: #edf1f6;
 }
 
@@ -79,11 +80,13 @@ nav a{
     background: #edf1f6;
     font-size: 1rem;
     color: black;
+    font-weight: bold;
 }
 
 nav a:hover{
     text-decoration: underline;
     color: rgb(0, 31, 63);
+    font-weight: ;
 }
 
 .playlist-container{  
@@ -180,36 +183,43 @@ nav a:hover{
 }
 
 .home-container{
-    min-width:0;
+    max-width: 100%;
     flex: 1;
     display: flex;
     flex-direction: column;
     padding: 20px;
     margin-top: 60px;
 }
-.nav-bar-container{
-    display: flex;
-    /* justify-content: space-between; */
-    width: 100%;
-   
-    margin-bottom: 30px;
-    max-width: 1200px;
-   
+
+.search-container{
+    position: relative;
+    width: 250px;
+    background-color: #edf1f6;
     
+    button img {
+        width: 25px;
+        height: 25px;
+        background-color: white;
+    }
 }
 
-.tab-container-left{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    padding: 4px 50px;
-    gap: 20px;
-    
-    button{
-        font-size: clamp(1rem, calc(7vw + 1rem), 1.5rem)
-    }
+.search-container input[type="text"] {
+    width: 100%;
+    padding: 8px 40px 8px 10px; /* ruang untuk icon di kanan */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+}
 
-
+.search-container button {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 .search{
@@ -241,7 +251,7 @@ nav a:hover{
 }
 
 .nav-bar-genre{
-    width: 960px;
+    /* width: 960px; */
     padding: 0 50px;
     margin-top: 30px;
  
@@ -251,25 +261,6 @@ nav a:hover{
     display: flex;
     gap: 15px;
     
-}
-
-.tab-button{
-    margin-top: 10px;
-    gap: 5px;
-    padding: 10px 30px;
-    background-color: rgb(239, 232, 232);
-    color: black;
-    border: none;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: bold;
-
-}
-
-.tab-button:hover{
-    background-color: #00408c;
-    color: white;
-    transition: 0.3s;
 }
 
 .genre-button{
@@ -286,8 +277,6 @@ nav a:hover{
     transition: background-color 0.3s ease;
     display: inline-block;
     text-align: center;
-
-   
 }
 
 .genre-button:hover{
@@ -299,6 +288,7 @@ nav a:hover{
 .music-container{
     padding: 20px 50px;
     background-color: rgb(0, 31, 63);
+    
 }
 
 .album-container{
