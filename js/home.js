@@ -32,3 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
         
         showAlbums();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuButton.addEventListener('click', () => {
+        nav.classList.toggle('show');
+    });
+});

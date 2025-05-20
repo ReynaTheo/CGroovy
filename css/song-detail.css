@@ -39,7 +39,7 @@ header {
 
     img{
         background: #edf1f6;
-        width: 200px;
+        width: 100px;
         height: auto;
     }
 }
@@ -74,8 +74,9 @@ nav a{
     text-decoration: none;
     color: rgb(0, 31, 63);
     background: #edf1f6;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: black;
+    font-weight: bold;
 }
 
 nav a:hover{
@@ -84,16 +85,16 @@ nav a:hover{
 }
 
 .playlist-container{  
-    margin-top: 110px; 
+    margin-top: 58px; 
     background-color: #00408c;
     flex: 0 0 auto;
-    width: min(250px, 30vw);
+    width: min(200px, 30vw);
     height: 100vh;
     position: sticky;
     top: 0;
     overflow-y: scroll;
     p{
-        font-size: clamp(1rem, 2vw, 1.5rem);
+        font-size: clamp(1rem, 2vw, 1rem);
     }
 }
 
@@ -141,7 +142,7 @@ nav a:hover{
     flex-direction: column;
     align-items: center;
     
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 1rem);
 }
 
 .button-playlist{
@@ -150,7 +151,7 @@ nav a:hover{
     align-items: flex-start;
     gap: 5px;
     /* padding: 5px 10px; */
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 1rem;
     background-color: rgba(1, 45, 88, 0.936);
     color: rgb(239, 232, 232);
     border: none;
@@ -171,7 +172,7 @@ nav a:hover{
 /* HOME */
 .home-container{
     width: 100%;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .panah-kiri{

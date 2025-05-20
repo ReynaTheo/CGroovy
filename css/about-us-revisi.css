@@ -35,7 +35,7 @@ header {
 
     img{
         background: #edf1f6;
-        width: 200px;
+        width: 100px;
         height: auto;
     }
 }
@@ -70,8 +70,9 @@ nav a{
     text-decoration: none;
     color: rgb(0, 31, 63);
     background: #edf1f6;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: black;
+    font-weight: bold;
 }
 
 nav a:hover{
@@ -101,7 +102,7 @@ nav a:hover{
 } */
  
 .content-container{
-    margin-top: 150px;
+    margin-top: 100px;
     /* position: relative; */
     padding: 0px 20px;
     max-width: 100%;
@@ -363,7 +364,7 @@ footer{
         flex-direction: column;
         background-color: white;
         position: absolute;
-        top: 120px;
+        top: 80px;
         right: 20px;
         width: 200px;
         padding: 10px;

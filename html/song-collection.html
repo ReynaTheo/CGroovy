@@ -8,9 +8,32 @@
 </head>
 <body>
     <div class="container">
+        <header>
+            <div class="header-left">
+                <img src="../assets/cgroovy.png" alt="">
+                    
+                <form class="search" action="#">
+                    <input type="text" name="search" placeholder="Search.." > 
+                        <button type="submit">
+                            <img src="../assets/search-hitam.png" alt="search-icon">
+                        </button>
+                </form>
+
+            </div>
+                
+                <div class="header-content">
+                    <button class="menu-toggle">☰</button>
+                    <nav>
+                        <a href="home.html">Home</a>
+                        <a href="song-collection.html">Song Collection</a>
+                        <a href="about-us.html">About Us</a>
+                    </nav>    
+                </div>    
+        </header>
+        
+        <!-- PLAYLIST -->
         <div class="playlist-container">
             <div class="content-playlist">
-                <img src="../assets/cgroovy.png" alt="">
                 <button class="button-playlist" id="new-playlist-button">+ New Playlist</button>
                 <button class="button-playlist">
                     <p class="button-text">Kpop's</p>
@@ -52,31 +75,8 @@
                  </button>
             </div>
         </div>
-        
-        <div class="home-container">  
-            <div class="nav-bar-container">
-                <div class="tab-container-left">
-                    <a href="home.html">
-                        <button class="tab-button">Home</button>
-                    </a>
-                    <a href="song-collection.html">
-                        <button class="tab-button">Song Collection</button>
-                    </a>
-                    <a href="about-us.html">
-                        <button class="tab-button">About Us</button>
-                    </a>
-                </div>
 
-                <div class="tab-container-right">
-                    <form class="search" action="#">
-                        <input type="text" name="search" placeholder="Search..">
-                        <button type="submit">
-                            <img src="../assets/search.png" alt="search-icon">
-                        </button>
-                    </form>
-                </div>
-            </div>
-            
+        <div class="home-container">  
             <div class="music-container">
                 <div class="genre-container">
                     <div class="genre-header">
@@ -92,28 +92,28 @@
                             <p class="album-explanation">A romantic song with a soft melody that talks about sacrifice for love.</p>
                         </div>
                         
-                        <div class="album-card">
+                        <div class="album-card" onclick="goToDetail('1')">
                             <img src="../assets/Cover Music/Pop/blinding lights cover.png" alt="Album Cover" class="album-cover">
                             <p class="album-title">Blinding Lights</p>
                             <p class="album-artist">The Weekend</p>
                             <p class="album-explanation">An energetic synthwave song with retro vibes about longing and obsession.</p>
                         </div>
                         
-                        <div class="album-card">
+                        <div class="album-card" onclick="goToDetail('1')">
                             <img src="../assets/Cover Music/Pop/dandelion cover.jpg" alt="Album Cover" class="album-cover">
                             <p class="album-title">Dandelions</p>
                             <p class="album-artist">Ruth B.</p>
                             <p class="album-explanation">A catchy indie ballad about the simple, sincere hope of love.</p>
                         </div>
                         
-                        <div class="album-card">
+                        <div class="album-card" onclick="goToDetail('1')">
                             <img src="../assets/Cover Music/Pop/santa tell me cover.png" alt="Album Cover" class="album-cover">
                             <p class="album-title">Santa Tell Me</p>
                             <p class="album-artist">Ariana Grande</p>
                             <p class="album-explanation">A cheerful Christmas song that talks about doubts about love during the holiday season.</p>
                         </div>
                         
-                        <div class="album-card">
+                        <div class="album-card" onclick="goToDetail('1')">
                             <img src="../assets/Cover Music/Pop/vintage cover.jpg" alt="Album Cover" class="album-cover">
                             <p class="album-title">Vintage</p>
                             <p class="album-artist">NIKI</p>
@@ -129,35 +129,35 @@
                     </div>
                          
                     <div class="album-grid">
-                        <div class="album-card">
+                        <div class="album-card" onclick="goToDetail('1')">
                             <img src="../assets/Cover Music/R&B/young dumb and broke cover.jpg" alt="Album Cover" class="album-cover">
                             <p class="album-title">Young Dumb & Broke</p>
                             <p class="album-artist">Khalid</p>
                             <p class="album-explanation">A laid-back song about the freedom and simplicity of youth.</p>
                         </div>
                         
-                        <div class="album-card">
+                        <div class="album-card" onclick="goToDetail('1')">
                             <img src="../assets/Cover Music/R&B/right now cover.jpg" alt="Album Cover" class="album-cover">
                             <p class="album-title">Right Now (Na Na Na)</p>
                             <p class="album-artist">Akon</p>
                             <p class="album-explanation">An upbeat hip-hop song about living in the moment and letting go of the past.</p>
                         </div>
                         
-                        <div class="album-card">
+                        <div class="album-card" onclick="goToDetail('1')">
                             <img src="../assets/Cover Music/R&B/sure thing cover.jpg" alt="Album Cover" class="album-cover">
                             <p class="album-title">Sure Thing</p>
                             <p class="album-artist">Miguel</p>
                             <p class="album-explanation">A sensual R&B song that affirms unconditional love.</p>
                         </div>
                         
-                        <div class="album-card">
+                        <div class="album-card" onclick="goToDetail('1')">
                             <img src="../assets/Cover Music/R&B/lets groove cover.jpg" alt="Album Cover" class="album-cover">
                             <p class="album-title">Let's Groove</p>
                             <p class="album-artist">Earth, Wind & Fire</p>
                             <p class="album-explanation">An iconic funk/disco song that gets everyone dancing.</p>
                         </div>
                         
-                        <div class="album-card">
+                        <div class="album-card" onclick="goToDetail('1')">
                             <img src="../assets/Cover Music/R&B/because of you cover.jpg" alt="Album Cover" class="album-cover">
                             <p class="album-title">Because of You</p>
                             <p class="album-artist">Ne-Yo</p>
@@ -180,28 +180,28 @@
                             <p class="album-explanation">An emotional K-pop song with a powerful dance that expresses the sadness of heartbreak.</p>
                         </div>
                         
-                        <div class="album-card">
+                        <div class="album-card" onclick="goToDetail('1')">
                             <img src="../assets/Cover Music/Kpop/you are cover.jpg" alt="Album Cover" class="album-cover">
                             <p class="album-title">You Are</p>
                             <p class="album-artist">GOT7</p>
                             <p class="album-explanation">An energetic K-pop song with an uplifting message for listeners.</p>
                         </div>
                         
-                        <div class="album-card">
+                        <div class="album-card" onclick="goToDetail('1')">
                             <img src="../assets/Cover Music/Kpop/the eve cover.jpg" alt="Album Cover" class="album-cover">
                             <p class="album-title">The Eve</p>
                             <p class="album-artist">EXO</p>
                             <p class="album-explanation">A song with a dark atmosphere and a mysterious vibe that captivates.</p>
                         </div>
                         
-                        <div class="album-card">
+                        <div class="album-card" onclick="goToDetail('1')">
                             <img src="../assets/Cover Music/Kpop/dance the night away cover.jpg" alt="Album Cover" class="album-cover">
                             <p class="album-title">Dance the Night Away</p>
                             <p class="album-artist">TWICE</p>
                             <p class="album-explanation">A cheerful and upbeat song perfect for summer parties.</p>
                         </div>
                         
-                        <div class="album-card">
+                        <div class="album-card" onclick="goToDetail('1')">
                             <img src="../assets/Cover Music/Kpop/lovesick girls cover.png" alt="Album Cover" class="album-cover">
                             <p class="album-title">Lovesick Girls</p>
                             <p class="album-artist">BLACKPINK</p>
@@ -210,6 +210,9 @@
                     </div>
                 </div>
             </div>
+                
+            </div>
+            
         </div>
         
     </div>

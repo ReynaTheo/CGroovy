@@ -4,13 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C'Groovy</title>
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/home-coba.css">
 </head>
 <body>
     <div class="container">
+         <header>
+            <div class="header-left">
+                <img src="../assets/cgroovy.png" alt="">
+                    
+                <form class="search" action="#">
+                    <input type="text" name="search" placeholder="Search.." > 
+                        <button type="submit">
+                            <img src="../assets/search-hitam.png" alt="search-icon">
+                        </button>
+                </form>
+
+            </div>
+                
+                <div class="header-content">
+                    <button class="menu-toggle">☰</button>
+                    <nav>
+                        <a href="home.html">Home</a>
+                        <a href="song-collection.html">Song Collection</a>
+                        <a href="about-us.html">About Us</a>
+                    </nav>    
+                </div>    
+        </header>
+
+        <!-- PLAYLIST -->
         <div class="playlist-container">
             <div class="content-playlist">
-                <img src="../assets/cgroovy.png" alt="">
                 <button class="button-playlist" id="new-playlist-button">+ New Playlist</button>
                 <button class="button-playlist">
                     <p class="button-text">Kpop's</p>
@@ -53,30 +76,7 @@
             </div>
         </div>
     
-        <div class="home-container">  
-            <div class="nav-bar-container">
-                <div class="tab-container-left">
-                    <a href="home.html">
-                        <button class="tab-button">Home</button>
-                    </a>
-                    <a href="song-collection.html">
-                        <button class="tab-button">Song Collection</button>
-                    </a>
-                    <a href="about-us.html">
-                        <button class="tab-button">About Us</button>
-                    </a>
-                </div>
-
-                <div class="tab-container-right">
-                    <form class="search" action="#">
-                        <input type="text" name="search" placeholder="Search..">
-                        <button type="submit">
-                            <img src="../assets/search.png" alt="search-icon">
-                        </button>
-                    </form>
-                </div>
-            </div>   
-            
+        <div class="home-container">              
             <div class="nav-bar-genre">
                     <div class="nav-bar-genre-content">
                         <button class="genre-button">Relax</button>
@@ -92,7 +92,7 @@
             <div class="music-container">
                 <div class="album-container">
                     <div class="album-header">
-                        <h1 class="album-container-title">Album For You</h1>
+                        <h1 class="album-container-title">Recommendation</h1>
                         <div class="album-navigation">
                             <button class="nav-arrow" id="prev-album">
                                 <img src="../assets/icon kiri.png" alt="">
@@ -168,7 +168,7 @@
                     </div>
 
                     <div class="quick-picks-header">
-                        <h1>Recommendation</h1>
+                        <h1>Quick Picks</h1>
                         <button class="play-all">Play All</button>
                     </div>
 
