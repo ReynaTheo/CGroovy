@@ -8,17 +8,34 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <div class="navbar">
+            <div class="logo">
             <img src="../assets/cgroovy.png" alt="">
-                <div class="header-content">
-                    <button class="menu-toggle">☰</button>
-                    <nav>
-                        <a href="home.html">Home</a>
-                        <a href="song-collection.html">Song Collection</a>
-                        <a href="about-us.html">About Us</a>
-                    </nav>    
-                </div>    
-        </header>
+            </div>
+            
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="home.html">Home</a>
+                    <a href="song-collection.html">Song Collection</a>
+                    <a href="about-us.html">About Us</a>
+                </div>
+                
+                <div class="menu-icon" onclick="toggleDropdown()">☰</div>
+
+            </div>
+        </div>
+
+        <!-- Dropdown (initially hidden) -->
+        <div class="dropdown" id="menuDropdown">
+            <!-- Menu utama (akan jadi satu di mobile) -->
+            <a href="home.html" class="mobile-menu">Home</a>
+            <a href="song-collection.html" class="mobile-menu">Song Collection</a>
+            <a href="about-us.html" class="mobile-menu">About Us</a>
+            <!-- Tambahan -->
+            <a href="#">Settings</a>
+            <a href="#">Profile</a>
+            <a href="register.html">Logout</a>
+        </div>
     
         <div class="content-container">
                 <div class="history-container">

@@ -432,6 +432,10 @@ form{
     background: transparent;
 }
 
+.nav-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
  .album-container-title{
     font-size: 2rem;
     font-size: clamp(1rem, calc(7vw + 1rem), 2rem);

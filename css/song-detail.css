@@ -67,13 +67,11 @@ body {
        background-color: #333;
     }
 
-    .menu-icon {
       .menu-icon {
       font-size: 26px;
       color: white;
       cursor: pointer;
       background-color: #333;
-    }
     }
 
     .dropdown {
@@ -102,20 +100,7 @@ body {
       display: none;
     }
 
-    /* === Responsive === */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-      
-       .menu-icon {
-        display: block; /* Tampilkan icon menu */
-      }
-
-      .mobile-menu {
-        display: block;
-      }
-    }
+   
 
 /* PLAYLIST */
 .playlist-container{  
@@ -254,11 +239,23 @@ body {
   width: 20px;
   height: 20px;
 }
-
+ 
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .search-container {
     max-width: 90%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+      
+  .menu-icon {
+    display: block; /* Tampilkan icon menu */
+  }
+
+  .mobile-menu {
+    display: block;
   }
 }
 

@@ -1,37 +1,36 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const albumGrid = document.querySelector('.album-grid');
-    const albumCards = document.querySelectorAll('.album-card');
-    const prevButton = document.getElementById('prev-album');
-    const nextButton = document.getElementById('next-album');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const albumCards = document.querySelectorAll('.album-card');
+//     const prevButton = document.getElementById('prev-album');
+//     const nextButton = document.getElementById('next-album');
     
-    let currentIndex = 0;
-    const cardsPerPage = 5;
-    const totalPages = Math.ceil(albumCards.length / cardsPerPage);
+//     let currentIndex = 0;
+//     const cardsPerPage = 5;
+//     const totalPages = Math.ceil(albumCards.length / cardsPerPage);
         
-    function showAlbums() {
-        albumCards.forEach(card => {
-            card.style.display = 'none';
-        });
+//     function showAlbums() {
+//         albumCards.forEach(card => {
+//             card.style.display = 'none';
+//         });
         
-        for (let i = 0; i < cardsPerPage; i++) {
-            const index = (currentIndex * cardsPerPage + i) % albumCards.length;
-            if (albumCards[index]) {
-                albumCards[index].style.display = 'block';
-            }
-        }
-    }
-        nextButton.addEventListener('click', function() {
-            currentIndex = (currentIndex + 1) % totalPages;
-            showAlbums();
-        });
+//         for (let i = 0; i < cardsPerPage; i++) {
+//             const index = (currentIndex * cardsPerPage + i) % albumCards.length;
+//             if (albumCards[index]) {
+//                 albumCards[index].style.display = 'block';
+//             }
+//         }
+//     }
+//         nextButton.addEventListener('click', function() {
+//             currentIndex = (currentIndex + 1) % totalPages;
+//             showAlbums();
+//         });
         
-        prevButton.addEventListener('click', function() {
-            currentIndex = (currentIndex - 1 + totalPages) % totalPages;
-            showAlbums();
-        });
+//         prevButton.addEventListener('click', function() {
+//             currentIndex = (currentIndex - 1 + totalPages) % totalPages;
+//             showAlbums();
+//         });
         
-        showAlbums();
-});
+//         showAlbums();
+// });
 
 function toggleDropdown() {
       const menu = document.getElementById("menuDropdown");
@@ -122,62 +121,60 @@ function toggleDropdown() {
 // });
 
 $(document).ready(function() {
-    const $slider = $('#album-slider');
+    const $albumGrid = $('.album-grid');
     const $albumCards = $('.album-card');
-    const cardWidth = $albumCards.outerWidth(true);
-    const $container = $('.slider-container');
-    let currentPosition = 0;
+    const $prevBtn = $('#prev-album');
+    const $nextBtn = $('#next-album');
     
-    // Calculate how many cards are visible
-    function getVisibleCards() {
-        return Math.floor($container.width() / cardWidth);
+    const totalAlbums = $albumCards.length;
+    const visibleAlbums = 5; // Always show 5 albums
+    let currentIndex = 0;
+    
+    // Set initial width of grid to contain all albums
+    $albumGrid.css('width', 'calc(100% * ' + totalAlbums + ')');
+    
+    // Initialize slider
+    function initSlider() {
+        updateNavigation();
+        positionSlider();
     }
     
-    // Update slider position
-    function updateSliderPosition() {
-        $slider.css('transform', `translateX(-${currentPosition * cardWidth}px)`);
-        
-        // Disable/enable buttons based on position
-        $('#prev').prop('disabled', currentPosition === 0);
-        $('#next').prop('disabled', currentPosition >= $albumCards.length - getVisibleCards());
+    // Position slider based on currentIndex
+    function positionSlider() {
+        const cardWidth = $albumCards.first().outerWidth(true);
+        const moveDistance = -currentIndex * cardWidth;
+        $albumGrid.css('transform', `translateX(${moveDistance}px)`);
     }
     
-    // Next button click
-    $('#next').on('click', function() {
-        const visibleCards = getVisibleCards();
-        if (currentPosition < $albumCards.length - visibleCards) {
-            currentPosition++;
-            updateSliderPosition();
+    // Update navigation buttons
+    function updateNavigation() {
+        $prevBtn.prop('disabled', currentIndex === 0);
+        $nextBtn.prop('disabled', currentIndex >= totalAlbums - visibleAlbums);
+    }
+    
+    // Next button click handler - move one card right
+    $nextBtn.on('click', function() {
+        if (currentIndex < totalAlbums - visibleAlbums) {
+            currentIndex++;
+            positionSlider();
+            updateNavigation();
         }
     });
     
-    // Previous button click
-    $('#prev').on('click', function() {
-        if (currentPosition > 0) {
-            currentPosition--;
-            updateSliderPosition();
+    // Previous button click handler - move one card left
+    $prevBtn.on('click', function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            positionSlider();
+            updateNavigation();
         }
     });
-    
-    // Initialize
-    updateSliderPosition();
     
     // Handle window resize
     $(window).on('resize', function() {
-        const visibleCards = getVisibleCards();
-        currentPosition = Math.min(currentPosition, $albumCards.length - visibleCards);
-        updateSliderPosition();
-    });
-});
-
-$(document).ready(function() {
-    $('#next').on('click', function() {
-        console.log('Next button clicked');
-        $('#album-slider').css('transform', 'translateX(-100px)');
+        positionSlider();
     });
     
-    $('#prev').on('click', function() {
-        console.log('Prev button clicked');
-        $('#album-slider').css('transform', 'translateX(0)');
-    });
+    // Initialize the slider
+    initSlider();
 });

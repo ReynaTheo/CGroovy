@@ -3,6 +3,7 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    background-color: #222;
 }
 
 .container{
@@ -29,6 +30,7 @@ body {
       img{
         width: 100px;
         height: auto;
+        background-color: #333;
       }
 
     }
@@ -36,10 +38,12 @@ body {
     .logo{
         display: flex;
         gap: 80px;
+        background-color: #333;
     }
 
     .search-container{
         border-radius: 5px;
+        background-color: #333;
     }
 
     form.search{
@@ -56,9 +60,11 @@ body {
         display: flex;
         gap: 20px;
         align-items: center;
+        background-color: #333;
         
         .menu-icon{
             margin-top: -5px;
+            background-color: #333;
         }
     }
 
@@ -66,17 +72,20 @@ body {
       display: flex;
       gap: 20px;
       align-items: center;
+      background-color: #333;
     }
 
     .nav-links a {
       color: white;
       text-decoration: none;
+      background-color: #333;
     }
 
     .menu-icon {
       font-size: 26px;
       color: white;
       cursor: pointer;
+      background-color: #333;
     }
 
     .dropdown {
@@ -175,6 +184,7 @@ body {
         max-height: 6rem;
         object-fit: cover;
         background: none ;
+        
     }
 
 }
@@ -256,14 +266,10 @@ body {
 .search-container button img {
   width: 20px;
   height: 20px;
+  background-color: white;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .search-container {
-    max-width: 90%;
-  }
-}
+
 
 .nav-bar-genre{
     /* width: 960px; */
@@ -375,6 +381,88 @@ body {
     padding: 0 10px 10px;
 }
 
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .search-container {
+    max-width: 90%;
+  }
+  
+  .nav-links {
+      display: none;
+  }
+
+  .mobile-menu {
+      display: block;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .nav-right {
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .menu-icon {
+    margin-left: auto;
+  }
+  .container {
+    flex-direction: column;
+  }
+  
+  .playlist-container {
+      width: 100%;
+      height: auto;
+      position: relative;
+      order: 2;
+  }
+    
+  .content{
+    flex-direction: column;
+  }
+
+  .home-container {
+      padding: 10px;
+  }
+    
+  .nav-bar-container {
+      flex-direction: column;
+  }
+
+   .music-container {
+    padding: 20px;
+  }
+
+  .album-grid {
+    /* grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 15px; */
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+
+  .album-card {
+    display: block; /* tampilkan album */
+  }
+
+   .search-container {
+    margin: 10px 0;
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+
+  .dropdown {
+    position: static;
+    width: 100%;
+  }
+
+  .dropdown a {
+    text-align: left;
+    padding: 12px;
+  }
+    
+}
 
 @media (max-width: 992px) {
     .playlist-container {
@@ -386,27 +474,6 @@ body {
     }
 }
 
-/* Untuk layar kecil (mobile) */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    
-    .playlist-container {
-        width: 100%;
-        height: auto;
-        position: static;
-    }
-    
-    .home-container {
-        padding: 15px;
-    }
-    
-    .nav-bar-container {
-        flex-direction: column;
-    }
-    
-}
 
 @media (max-width: 1024px) {
   .song-content-top {
@@ -431,14 +498,7 @@ body {
 
     /* Responsive rules */
  @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .mobile-menu {
-        display: block;
-      }
-    }
+      
 
     /* @media (max-width: 768px) {
       .nav-links {
@@ -455,4 +515,4 @@ body {
     } */
 
 
-    
+ }
