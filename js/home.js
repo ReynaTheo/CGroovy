@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const albumGrid = document.querySelector('.album-grid');
     const albumCards = document.querySelectorAll('.album-card');
     const prevButton = document.getElementById('prev-album');
     const nextButton = document.getElementById('next-album');
