@@ -3,70 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Song Detail</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../css/song-detail.css">
 </head>
 <body>
+
     <div class="container">
-        <header>
+        <div class="navbar">
+            <div class="logo">
             <img src="../assets/cgroovy.png" alt="">
-                <div class="header-content">
-                    <button class="menu-toggle">☰</button>
-                    <nav>
-                        <a href="home.html">Home</a>
-                        <a href="song-collection.html">Song Collection</a>
-                        <a href="about-us-revisi.html">About Us</a>
-                    </nav>    
-                </div>    
-        </header>
-        
-        <!-- PLAYLIST -->
-        <div class="playlist-container">
-            <div class="content-playlist">
-                <button class="button-playlist" id="new-playlist-button">+ New Playlist</button>
-                <button class="button-playlist">
-                    <p class="button-text">Kpop's</p>
-                    <p class="button-text">Felicia Edita</p>
-                </button>
-                <button class="button-playlist">
-                    <p class="button-text">Chilly Nights</p>
-                    <p class="button-text">Felicia Edita</p>
-                </button>
+            </div>
+            
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="home.html">Home</a>
+                    <a href="song-collection.html">Song Collection</a>
+                    <a href="about-us.html">About Us</a>
+                </div>
+                
+                <div class="menu-icon" onclick="toggleDropdown()">☰</div>
 
-                <button class="button-playlist">
-                    <p class="button-text">Piano</p>
-                    <p class="button-text">Felicia Edita</p>
-                 </button>
-                 
-                 <button class="button-playlist">
-                    <p class="button-text">Yoasobi</p>
-                    <p class="button-text">Felicia Edita</p>
-                 </button>
-                 
-                 <button class="button-playlist">
-                    <p class="button-text">90's</p>
-                    <p class="button-text">Felicia Edita</p>
-                 </button>
-
-                 <button class="button-playlist">
-                    <p class="button-text">EXO</p>
-                    <p class="button-text">Felicia Edita</p>
-                 </button>
-
-                 <button class="button-playlist">
-                    <p class="button-text">Disney Song</p>
-                    <p class="button-text">Felicia Edita</p>
-                 </button>
-
-                 <button class="button-playlist">
-                    <p class="button-text">Taylor Swift</p>
-                    <p class="button-text">Felicia Edita</p>
-                 </button>
             </div>
         </div>
 
-        <!-- MAIN -->
-        <div class="home-container">  
+        <!-- Dropdown (initially hidden) -->
+        <div class="dropdown" id="menuDropdown">
+            <!-- Menu utama (akan jadi satu di mobile) -->
+            <a href="home.html" class="mobile-menu">Home</a>
+            <a href="song-collection.html" class="mobile-menu">Song Collection</a>
+            <a href="about-us.html" class="mobile-menu">About Us</a>
+            <!-- Tambahan -->
+            <a href="#">Settings</a>
+            <a href="#">Profile</a>
+            <a href="register.html">Logout</a>
+        </div>
+        <div class="content">
+            <!-- PLAYLIST -->
+            <div class="playlist-container">
+                <div class="content-playlist">
+                    <button class="button-playlist" id="new-playlist-button">+ New Playlist</button>
+                    <button class="button-playlist">
+                        <p class="button-text">Kpop's</p>
+                        <p class="button-text">Felicia Edita</p>
+                    </button>
+                    <button class="button-playlist">
+                        <p class="button-text">Chilly Nights</p>
+                        <p class="button-text">Felicia Edita</p>
+                    </button>
+    
+                    <button class="button-playlist">
+                        <p class="button-text">Piano</p>
+                        <p class="button-text">Felicia Edita</p>
+                     </button>
+                     
+                     <button class="button-playlist">
+                        <p class="button-text">Yoasobi</p>
+                        <p class="button-text">Felicia Edita</p>
+                     </button>
+                     
+                     <button class="button-playlist">
+                        <p class="button-text">90's</p>
+                        <p class="button-text">Felicia Edita</p>
+                     </button>
+    
+                     <button class="button-playlist">
+                        <p class="button-text">EXO</p>
+                        <p class="button-text">Felicia Edita</p>
+                     </button>
+    
+                     <button class="button-playlist">
+                        <p class="button-text">Disney Song</p>
+                        <p class="button-text">Felicia Edita</p>
+                     </button>
+    
+                     <button class="button-playlist">
+                        <p class="button-text">Taylor Swift</p>
+                        <p class="button-text">Felicia Edita</p>
+                     </button>
+                </div>
+            </div>
+        
+            <!-- HOME CONTAINER -->
+            <div class="home-container">  
                 
             <img  class="panah-kiri" src="../assets/icon kiri.png" alt="" onclick="goBack()">
             <div class="song-detail-container">
@@ -159,8 +177,7 @@
             </div>   
             
         </div>
-    </div>
+
     <script src="../js/song-detail.js"></script>
-    </div>   
 </body>
 </html>

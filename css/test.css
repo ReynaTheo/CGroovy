@@ -3,6 +3,7 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    background-color: #222;
 }
 
 .container{
@@ -29,6 +30,7 @@ body {
       img{
         width: 100px;
         height: auto;
+        background-color: #333;
       }
 
     }
@@ -36,10 +38,12 @@ body {
     .logo{
         display: flex;
         gap: 80px;
+        background-color: #333;
     }
 
     .search-container{
         border-radius: 5px;
+        background-color: #333;
     }
 
     form.search{
@@ -56,9 +60,11 @@ body {
         display: flex;
         gap: 20px;
         align-items: center;
+        background-color: #333;
         
         .menu-icon{
             margin-top: -5px;
+            background-color: #333;
         }
     }
 
@@ -66,17 +72,20 @@ body {
       display: flex;
       gap: 20px;
       align-items: center;
+      background-color: #333;
     }
 
     .nav-links a {
       color: white;
       text-decoration: none;
+      background-color: #333;
     }
 
     .menu-icon {
       font-size: 26px;
       color: white;
       cursor: pointer;
+      background-color: #333;
     }
 
     .dropdown {
@@ -175,6 +184,7 @@ body {
         max-height: 6rem;
         object-fit: cover;
         background: none ;
+        
     }
 
 }
@@ -256,6 +266,7 @@ body {
 .search-container button img {
   width: 20px;
   height: 20px;
+  background-color: white;
 }
 
 /* Responsive tweaks */

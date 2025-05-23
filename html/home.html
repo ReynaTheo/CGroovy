@@ -3,261 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C'Groovy</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
+
     <div class="container">
-         <header>
-            <div class="header-left">
-                <img src="../assets/cgroovy.png" alt="">
-                    
-                <form class="search" action="#">
-                    <div class="search-container">
-                        <input type="text" name="search" placeholder="Search.." > 
-                            <button type="submit">
-                                <img src="../assets/search-hitam.png" alt="search-icon">
-                            </button>
-                    </div>
-                </form>
-
+        <div class="navbar">
+            <div class="logo">
+            <img src="../assets/cgroovy.png" alt="">
+            <form class="search" action="#">
+                <div class="search-container">
+                    <input type="text" name="search" placeholder="Search.." > 
+                        <button type="submit">
+                            <img src="../assets/search-hitam.png" alt="search-icon">
+                        </button>
+                </div>          
+            </form>
             </div>
+            
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="home.html">Home</a>
+                    <a href="song-collection.html">Song Collection</a>
+                    <a href="about-us.html">About Us</a>
+                </div>
                 
-                <div class="header-content">
-                    <button class="menu-toggle">☰</button>
-                    <nav>
-                        <a href="home.html">Home</a>
-                        <a href="song-collection.html">Song Collection</a>
-                        <a href="about-us.html">About Us</a>
-                    </nav>    
-                </div>    
-        </header>
+                <div class="menu-icon" onclick="toggleDropdown()">☰</div>
 
-        <!-- PLAYLIST -->
-        <div class="playlist-container">
-            <div class="content-playlist">
-                <button class="button-playlist" id="new-playlist-button">+ New Playlist</button>
-                <button class="button-playlist">
-                    <p class="button-text">Kpop's</p>
-                    <p class="button-text">Felicia Edita</p>
-                </button>
-                <button class="button-playlist">
-                    <p class="button-text">Chilly Nights</p>
-                    <p class="button-text">Felicia Edita</p>
-                </button>
-
-                <button class="button-playlist">
-                    <p class="button-text">Piano</p>
-                    <p class="button-text">Felicia Edita</p>
-                 </button>
-                 
-                 <button class="button-playlist">
-                    <p class="button-text">Yoasobi</p>
-                    <p class="button-text">Felicia Edita</p>
-                 </button>
-                 
-                 <button class="button-playlist">
-                    <p class="button-text">90's</p>
-                    <p class="button-text">Felicia Edita</p>
-                 </button>
-
-                 <button class="button-playlist">
-                    <p class="button-text">EXO</p>
-                    <p class="button-text">Felicia Edita</p>
-                 </button>
-
-                 <button class="button-playlist">
-                    <p class="button-text">Disney Song</p>
-                    <p class="button-text">Felicia Edita</p>
-                 </button>
-
-                 <button class="button-playlist">
-                    <p class="button-text">Taylor Swift</p>
-                    <p class="button-text">Felicia Edita</p>
-                 </button>
             </div>
         </div>
+
+        <!-- Dropdown (initially hidden) -->
+        <div class="dropdown" id="menuDropdown">
+            <!-- Menu utama (akan jadi satu di mobile) -->
+            <a href="home.html" class="mobile-menu">Home</a>
+            <a href="song-collection.html" class="mobile-menu">Song Collection</a>
+            <a href="about-us.html" class="mobile-menu">About Us</a>
+            <!-- Tambahan -->
+            <a href="#">Settings</a>
+            <a href="#">Profile</a>
+            <a href="register.html">Logout</a>
+        </div>
+        <div class="content">
+            <!-- PLAYLIST -->
+            <div class="playlist-container">
+                <div class="content-playlist">
+                    <button class="button-playlist" id="new-playlist-button">+ New Playlist</button>
+                    <button class="button-playlist">
+                        <p class="button-text">Kpop's</p>
+                        <p class="button-text">Felicia Edita</p>
+                    </button>
+                    <button class="button-playlist">
+                        <p class="button-text">Chilly Nights</p>
+                        <p class="button-text">Felicia Edita</p>
+                    </button>
     
-        <div class="home-container">              
-            <div class="nav-bar-genre">
-                    <div class="nav-bar-genre-content">
-                        <button class="genre-button">Relax</button>
-                        <button class="genre-button">Romance</button>
-                        <button class="genre-button">Energize</button>
-                        <button class="genre-button">Sleep</button>
-                        <button class="genre-button">Sad</button>
-                        <button class="genre-button">Focus</button>
-                        <button class="genre-button">Workout</button>
-                    </div>
+                    <button class="button-playlist">
+                        <p class="button-text">Piano</p>
+                        <p class="button-text">Felicia Edita</p>
+                     </button>
+                     
+                     <button class="button-playlist">
+                        <p class="button-text">Yoasobi</p>
+                        <p class="button-text">Felicia Edita</p>
+                     </button>
+                     
+                     <button class="button-playlist">
+                        <p class="button-text">90's</p>
+                        <p class="button-text">Felicia Edita</p>
+                     </button>
+    
+                     <button class="button-playlist">
+                        <p class="button-text">EXO</p>
+                        <p class="button-text">Felicia Edita</p>
+                     </button>
+    
+                     <button class="button-playlist">
+                        <p class="button-text">Disney Song</p>
+                        <p class="button-text">Felicia Edita</p>
+                     </button>
+    
+                     <button class="button-playlist">
+                        <p class="button-text">Taylor Swift</p>
+                        <p class="button-text">Felicia Edita</p>
+                     </button>
+                </div>
             </div>
-
-            <div class="music-container">
-                <div class="album-container">
-                    <div class="album-header">
-                        <h1 class="album-container-title">Recommendation</h1>
-                        <div class="album-navigation">
-                            <button class="nav-arrow" id="prev-album">
-                                <img src="../assets/icon kiri.png" alt="">
-                            </button>
-
-                            <button class="nav-arrow" id="next-album">
-                                <img src="../assets/icon kanan.png" alt="">
-                            </button>
+        
+            <!-- HOME CONTAINER -->
+             <div class="home-container">              
+                <div class="nav-bar-genre">
+                        <div class="nav-bar-genre-content">
+                            <button class="genre-button">Relax</button>
+                            <button class="genre-button">Romance</button>
+                            <button class="genre-button">Energize</button>
+                            <button class="genre-button">Sleep</button>
+                            <button class="genre-button">Sad</button>
+                            <button class="genre-button">Focus</button>
+                            <button class="genre-button">Workout</button>
                         </div>
-                    </div>
-                    
-                    <div class="album-grid">
-                        <div class="album-card">
-                            <img src="../assets/Cover Music/Home/get weird - little mix.png" alt="">
-                            <p class="album-title">Get Weird</p>
-                            <p class="album-artist">Little Mix</p>
-                        </div>
-
-                        <div class="album-card">
-                            <img src="../assets/Cover Music/Home/teenage dream - katy perry.jpg" alt="">
-                            <p class="album-title">Teenage Dream</p>
-                            <p class="album-artist">Katy Perry</p>
-                        </div>
-
-                        <div class="album-card">
-                            <img src="../assets/Cover Music/Home/twilight - boa.jpg" alt="">
-                            <p class="album-title">Twilight</p>
-                            <p class="album-artist">Boa</p>
-                        </div>
-
-
-                        <div class="album-card">
-                            <img src="../assets/Cover Music/Home/red pill blues - maroon 5.png" alt="">
-                            <p class="album-title">Red Pill Blues</p>
-                            <p class="album-artist">Maroon 5</p>
-                        </div>
-
-                        <div class="album-card">
-                            <img src="../assets/Cover Music/Home/lover - taylor swift.jpg" alt="">
-                            <p class="album-title">Lover</p>
-                            <p class="album-artist">Taylor Swift</p>
-                        </div>
-
-                        <div class="album-card">
-                            <img src="../assets/Cover Music/Home/encore - dj snake.jpg" alt="">
-                            <p class="album-title">Encore</p>
-                            <p class="album-artist">DJ Snake</p>
-                        </div>
-
-                        <div class="album-card">
-                            <img src="../assets/Cover Music/Home/blue - jonas blue.png" alt="">
-                            <p class="album-title">Blue</p>
-                            <p class="album-artist">Jonas Blue</p>
-                        </div>
-
-                        <div class="album-card">
-                            <img src="../assets/Cover Music/Home/doo-wops & hooligans - bruno mars.jpg" alt="">
-                            <p class="album-title">Doo-Wops & Hooligans</p>
-                            <p class="album-artist">Bruno Mars</p>
-                        </div>
-
-                        <div class="album-card">
-                            <img src="../assets/Cover Music/Home/take me home - one direction.jpg" alt="">
-                            <p class="album-title">Take Me Home</p>
-                            <p class="album-artist">One Direction</p>
-                        </div>
-
-                        <div class="album-card">
-                            <img src="../assets/Cover Music/Home/the aviary - galantis.jpg" alt="">
-                            <p class="album-title">The Aviary</p>
-                            <p class="album-artist">Galantis</p>
-                        </div>                          
-                    </div>
-
-                    <div class="quick-picks-header">
-                        <h1>Quick Picks</h1>
-                        <button class="play-all">Play All</button>
-                    </div>
-
-                    <div class="song-lists-container">
-                        <div class="song-column">
-                            <div class="song-item">
-                                <img src="../assets/Cover Music/Quick Picks/you and me - jennie.jpg" alt="">
-                                <div class="song-detail">
-                                    <p class="song-title">You & Me</p>
-                                    <p class="song-artist">JENNIE</p>
-                                </div>
-                            </div>
-
-                            <div class="song-item">
-                                <img src="../assets/Cover Music/Quick Picks/diet pepsi - addison rae.jpg" alt="">
-                                <div class="song-detail">
-                                    <p class="song-title">Diet Pepsi</p>
-                                    <p class="song-artist">Addison Rae</p>
-                                </div>
-                            </div>
-
-                            <div class="song-item">
-                                <img src="../assets/Cover Music/Quick Picks/8 letters - why don't we.jpg" alt="">
-                                <div class="song-detail">
-                                    <p class="song-title">8 Letters</p>
-                                    <p class="song-artist">Why Don't We</p>
-                                </div>
+                </div>
+    
+                <div class="music-container">
+                    <div class="album-container">
+                        <div class="album-header">
+                            <h1 class="album-container-title">Recommendation</h1>
+                            <div class="album-navigation">
+                                <button class="nav-arrow" id="prev-album">
+                                    <img src="../assets/icon kiri.png" alt="">
+                                </button>
+    
+                                <button class="nav-arrow" id="next-album">
+                                    <img src="../assets/icon kanan.png" alt="">
+                                </button>
                             </div>
                         </div>
+                        
+                        <div class="album-grid-wrapper">
 
-                        <div class="song-column">
-                            <div class="song-item">
-                                <img src="../assets/Cover Music/Quick Picks/linger - the cranberries.jpg" alt="">
-                                <div class="song-detail">
-                                    <p class="song-title">Linger</p>
-                                    <p class="song-artist">The Cranberries</p>
+                            <div class="album-grid">
+                                <div class="album-card">
+                                    <img src="../assets/Cover Music/Home/get weird - little mix.png" alt="">
+                                    <p class="album-title">Get Weird</p>
+                                    <p class="album-artist">Little Mix</p>
+                                </div>
+        
+                                <div class="album-card">
+                                    <img src="../assets/Cover Music/Home/teenage dream - katy perry.jpg" alt="">
+                                    <p class="album-title">Teenage Dream</p>
+                                    <p class="album-artist">Katy Perry</p>
+                                </div>
+        
+                                <div class="album-card">
+                                    <img src="../assets/Cover Music/Home/twilight - boa.jpg" alt="">
+                                    <p class="album-title">Twilight</p>
+                                    <p class="album-artist">Boa</p>
+                                </div>
+        
+        
+                                <div class="album-card">
+                                    <img src="../assets/Cover Music/Home/red pill blues - maroon 5.png" alt="">
+                                    <p class="album-title">Red Pill Blues</p>
+                                    <p class="album-artist">Maroon 5</p>
+                                </div>
+        
+                                <div class="album-card">
+                                    <img src="../assets/Cover Music/Home/lover - taylor swift.jpg" alt="">
+                                    <p class="album-title">Lover</p>
+                                    <p class="album-artist">Taylor Swift</p>
+                                </div>
+        
+                                <div class="album-card">
+                                    <img src="../assets/Cover Music/Home/encore - dj snake.jpg" alt="">
+                                    <p class="album-title">Encore</p>
+                                    <p class="album-artist">DJ Snake</p>
+                                </div>
+        
+                                <div class="album-card">
+                                    <img src="../assets/Cover Music/Home/blue - jonas blue.png" alt="">
+                                    <p class="album-title">Blue</p>
+                                    <p class="album-artist">Jonas Blue</p>
+                                </div>
+        
+                                <div class="album-card">
+                                    <img src="../assets/Cover Music/Home/doo-wops & hooligans - bruno mars.jpg" alt="">
+                                    <p class="album-title">Doo-Wops & Hooligans</p>
+                                    <p class="album-artist">Bruno Mars</p>
+                                </div>
+        
+                                <div class="album-card">
+                                    <img src="../assets/Cover Music/Home/take me home - one direction.jpg" alt="">
+                                    <p class="album-title">Take Me Home</p>
+                                    <p class="album-artist">One Direction</p>
+                                </div>
+        
+                                <div class="album-card">
+                                    <img src="../assets/Cover Music/Home/the aviary - galantis.jpg" alt="">
+                                    <p class="album-title">The Aviary</p>
+                                    <p class="album-artist">Galantis</p>
+                                </div>                          
+                            </div>
+                        </div>
+                        
+                        <div class="quick-picks-header">
+                            <h1>Quick Picks</h1>
+                            <button class="play-all">Play All</button>
+                        </div>
+    
+                        <div class="song-lists-container">
+                            <div class="song-column">
+                                <div class="song-item">
+                                    <img src="../assets/Cover Music/Quick Picks/you and me - jennie.jpg" alt="">
+                                    <div class="song-detail">
+                                        <p class="song-title">You & Me</p>
+                                        <p class="song-artist">JENNIE</p>
+                                    </div>
+                                </div>
+    
+                                <div class="song-item">
+                                    <img src="../assets/Cover Music/Quick Picks/diet pepsi - addison rae.jpg" alt="">
+                                    <div class="song-detail">
+                                        <p class="song-title">Diet Pepsi</p>
+                                        <p class="song-artist">Addison Rae</p>
+                                    </div>
+                                </div>
+    
+                                <div class="song-item">
+                                    <img src="../assets/Cover Music/Quick Picks/8 letters - why don't we.jpg" alt="">
+                                    <div class="song-detail">
+                                        <p class="song-title">8 Letters</p>
+                                        <p class="song-artist">Why Don't We</p>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="song-item">
-                                <img src="../assets/Cover Music/Quick Picks/don't wanna cry - seventeen.jpg" alt="">
-                                <div class="song-detail">
-                                    <p class="song-title">Don't Wanna Cry</p>
-                                    <p class="song-artist">SEVENTEEN</p>
+    
+                            <div class="song-column">
+                                <div class="song-item">
+                                    <img src="../assets/Cover Music/Quick Picks/linger - the cranberries.jpg" alt="">
+                                    <div class="song-detail">
+                                        <p class="song-title">Linger</p>
+                                        <p class="song-artist">The Cranberries</p>
+                                    </div>
+                                </div>
+    
+                                <div class="song-item">
+                                    <img src="../assets/Cover Music/Quick Picks/don't wanna cry - seventeen.jpg" alt="">
+                                    <div class="song-detail">
+                                        <p class="song-title">Don't Wanna Cry</p>
+                                        <p class="song-artist">SEVENTEEN</p>
+                                    </div>
+                                </div>
+    
+                                <div class="song-item">
+                                    <img src="../assets/Cover Music/Quick Picks/apt. - rose & bruno mars.jpg" alt="">
+                                    <div class="song-detail">
+                                        <p class="song-title">APT.</p>
+                                        <p class="song-artist">ROSE & Bruno Mars</p>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="song-item">
-                                <img src="../assets/Cover Music/Quick Picks/apt. - rose & bruno mars.jpg" alt="">
-                                <div class="song-detail">
-                                    <p class="song-title">APT.</p>
-                                    <p class="song-artist">ROSE & Bruno Mars</p>
+    
+                            <div class="song-column">
+                                <div class="song-item">
+                                    <img src="../assets/Cover Music/Quick Picks/uptown girl - westlife.jpg" alt="">
+                                    <div class="song-detail">
+                                        <p class="song-title">Uptown Girl</p>
+                                        <p class="song-artist">Westlife</p>
+                                    </div>
+                                </div>
+    
+                                <div class="song-item">
+                                    <img src="../assets/Cover Music/Quick Picks/perfect - one direction.jpg" alt="">
+                                    <div class="song-detail">
+                                        <p class="song-title">Perfect</p>
+                                        <p class="song-artist">One Direction</p>
+                                    </div>
+                                </div>
+    
+                                <div class="song-item">
+                                    <img src="../assets/Cover Music/Quick Picks/paradise - exo.jpg" alt="">
+                                    <div class="song-detail">
+                                        <p class="song-title">Paradise</p>
+                                        <p class="song-artist">EXO</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>             
+                </div>
 
-                        <div class="song-column">
-                            <div class="song-item">
-                                <img src="../assets/Cover Music/Quick Picks/uptown girl - westlife.jpg" alt="">
-                                <div class="song-detail">
-                                    <p class="song-title">Uptown Girl</p>
-                                    <p class="song-artist">Westlife</p>
-                                </div>
-                            </div>
-
-                            <div class="song-item">
-                                <img src="../assets/Cover Music/Quick Picks/perfect - one direction.jpg" alt="">
-                                <div class="song-detail">
-                                    <p class="song-title">Perfect</p>
-                                    <p class="song-artist">One Direction</p>
-                                </div>
-                            </div>
-
-                            <div class="song-item">
-                                <img src="../assets/Cover Music/Quick Picks/paradise - exo.jpg" alt="">
-                                <div class="song-detail">
-                                    <p class="song-title">Paradise</p>
-                                    <p class="song-artist">EXO</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>             
             </div>
-        </div>
+        </div>        
     </div>
 
+    <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/home.js"></script>
 </body>
 </html>
