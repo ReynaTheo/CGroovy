@@ -1,5 +1,5 @@
  *{
-    margin: 0;
+    mrgin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
@@ -13,12 +13,17 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
     
 }
 
 body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
+      background-color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     }
 
     
@@ -174,6 +179,7 @@ body {
         max-height: 6rem;
         object-fit: cover;
         background: none ;
+        
     }
 
 }
@@ -215,12 +221,12 @@ body {
 
 /* HOME CONTAINER */
 .home-container{
-    max-width: 100%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     padding: 20px;
-    /* margin-top: 60px; */
+    margin: 0;
+    /* max-width:  none !important; */
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
  /* .search-container{
@@ -346,9 +352,10 @@ form{
 
 
 .nav-bar-genre{
-    /* width: 960px; */
-    padding: 0 50px;
+    width: 100%;
+    padding: 0 20px;
     margin-top: 30px;
+    
  
 }
 
@@ -381,31 +388,46 @@ form{
 }
 
 .music-container{
-    padding: 20px 50px;
+    width: 100%;
+    padding: 0px;
+    margin: 0;
     background-color: #222; 
     
     
 }
 
 .album-container{
+    width: 100%;
+    /* overflow: hidden; */
+    position: relative;
     margin-bottom: 2rem;
-    max-width: 1150px;
+    padding: 0 20px;
 }
 
 .album-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin: 30px 0 20px 0;
     width: 100%;
-    max-width: 940px;
+    padding: 0;
+    position: relative;
+    h1{
+      /* font-size: clamp(1rem, calc(7vw + 1rem), 1rem); */
+      font-size: 30px;
+    }
+    /* max-width: 940px; */
     
 }
 
 .album-navigation{
+    position: static;
+    top: 0;
     display: flex;
-    gap: 15px;   
+    gap: 10px;  
+     margin-left: auto;
+
+    
 }
 
 .nav-arrow {
@@ -446,12 +468,19 @@ form{
 }
 
 .album-grid{
-    display: grid;
-    /* grid-template-columns: repeat(5, 1fr); */
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 25px;
+    display: flex;
+    gap: 15px;
+    width: fit-content; 
     width: 100%;
-    
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    transition: transform 0.3s ease;
+
+    padding-left: 0;
+    margin-left: 0;
+  
     p{
         font-size: clamp(1rem, calc(7vw + 1rem), 1.5rem);
     }
@@ -465,7 +494,11 @@ form{
     transition: transform 0.3s ease, opacity 0.3s ease;
     text-align: center;
     padding-bottom: 10px;
-    display: none;
+    display: block;
+    flex: 0 0 180px; 
+    scroll-snap-align: start;
+    /* min-width: 160px;
+    max-width: 200px;  */
 }
 
 .album-card:hover {
@@ -474,11 +507,15 @@ form{
 }
 
 .album-card img{
-    width: 100%;
+    /* width: 100%;
     aspect-ratio: 1/1;
     height: 200px;
     object-fit: cover;
-    display: block;
+    display: block; */
+
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
 
 .album-cover{
@@ -494,7 +531,9 @@ form{
     margin: 15px 0 5px;
     color: #333;
     font-size: 1rem;
-    padding: 0 10px;
+    padding: 0px 20px;
+    
+    
 }
 
 .album-artist{
@@ -505,11 +544,12 @@ form{
 } 
 
 .quick-picks-header{
-    
-    margin-top: 30px ;
     display: flex;
-    width: 940px;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 30px 0 15px 0;
     font-size: clamp(1rem, calc(7vw + 1rem), 1rem);
 
     
@@ -518,11 +558,10 @@ form{
   .quick-picks-header h1{
     color: white;
     text-transform: uppercase;
+    font-size: 35px;
     
   }
 
- 
-  
  
 .play-all{
     background-color: #1DB954;
@@ -542,19 +581,36 @@ form{
 
 
 .song-lists-container{
-    display: flex;
-    width: 940px;
-    /* gap: 20px; */
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-rows: repeat(3, auto); */
+    gap: 15px;
+    width: 100%;
+    padding: 0;
     
     
 }
 
 .song-column{
-    margin: 10px 10px 10px 0;
-    width: auto;
-    
-    
+    display: contents;   
 }
+
+.song-detail {
+    min-width: 0; /* Penting untuk text truncation */
+    overflow: hidden;
+    background-color: white;
+}
+
+.song-title{
+  font-weight: bold;
+}
+.song-title, .song-artist {
+    white-space: nowrap;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+}
+
 
 .song-item{
     display: flex;
@@ -563,12 +619,12 @@ form{
     align-items: center;
     border: 1px solid  gray;
     border-radius: 20px ;
-    margin-bottom: 30px;
+    
     background-color: white ;
     
     p{
     
-        font-size: clamp(1rem, calc(7vw + 1rem), 1.5rem);
+        font-size: 1rem;
         background-color: white;
         color: black;
         padding: 5px;
@@ -577,13 +633,35 @@ form{
 
     img{
         width: 100px;
-        height: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0;
     }
 
     
 }
 
-    /* Responsive rules */
+@media (max-width: 1200px) {
+    .album-card {
+        flex: 0 0 160px;
+    }
+    
+    .song-lists-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 1024px) {
+    .album-card {
+        flex: 0 0 160px;
+    }
+    
+    .song-lists-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
  @media (max-width: 768px) {
   
       .nav-links {
@@ -593,11 +671,7 @@ form{
       .mobile-menu {
         display: block;
       }
-    }
-
-
-@media (max-width: 768px) {
-
+    
  .navbar {
     justify-content: space-between;
   }
@@ -612,15 +686,15 @@ form{
   }
 
   .quick-picks-header{
-    max-width: fit-content;
+    /* max-width: fit-content; */
     gap: 25px;
     margin-top: 20px;
     display: flex;
-
   }
   
   .play-all{
       font-size: 20px;
+     
     
   }
   .logo {
@@ -684,17 +758,48 @@ form{
     padding: 20px;
   }
 
+  .album-container{
+    padding: 0 10px;
+  }
   .album-container-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+  }
+
+  .album-header{
+     flex-wrap: wrap;
+        gap: 15px;
+  }
+
+  .album-navigation{
+    gap: 5px;
+    
+
+    
+  }
+
+  .nav-arrow{
+    img{
+      width: 10px;
+      height: auto;
+    }
+    border-radius: 50%;
+    
+    
   }
 
   .album-grid {
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: 15px;
+    display: flex !important; /* Pastikan tetap flex di mobile */
+        grid-template-columns: unset; /* Hapus properti grid */
+        width: max-content; /* Lebar mengikuti content */
+        min-width: 100%;
+        gap: 10px;
+        padding-bottom: 15px;
   }
 
   .album-card {
-    display: block; /* tampilkan album */
+     flex: 0 0 140px;
+        width: 140px !important; /* Override width 100% */
+        scroll-snap-align: start;
   }
 
   .search-container {
@@ -715,9 +820,8 @@ form{
   }
 
   .song-lists-container{
-    display: flex;
-    flex-direction: column;
-    max-width: fit-content;
+     grid-template-columns: 1fr;
+     width: 100%;
   }
 }
 

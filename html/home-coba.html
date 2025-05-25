@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/test.css">
+    <link rel="stylesheet" href="../css/song-collection.css">
 </head>
 <body>
 
@@ -92,191 +92,147 @@
             </div>
         
             <!-- HOME CONTAINER -->
-             <div class="home-container">              
-                <div class="nav-bar-genre">
-                        <div class="nav-bar-genre-content">
-                            <button class="genre-button">Relax</button>
-                            <button class="genre-button">Romance</button>
-                            <button class="genre-button">Energize</button>
-                            <button class="genre-button">Sleep</button>
-                            <button class="genre-button">Sad</button>
-                            <button class="genre-button">Focus</button>
-                            <button class="genre-button">Workout</button>
-                        </div>
-                </div>
-    
+            <div class="home-container">  
                 <div class="music-container">
-                    <div class="album-container">
-                        <div class="album-header">
-                            <h1 class="album-container-title">Recommendation</h1>
-                            <div class="album-navigation">
-                                <button class="nav-arrow" id="prev-album">
-                                    <img src="../assets/icon kiri.png" alt="">
-                                </button>
-    
-                                <button class="nav-arrow" id="next-album">
-                                    <img src="../assets/icon kanan.png" alt="">
-                                </button>
+                    <div class="genre-container">
+                        <div class="genre-header">
+                            <h1 class="genre-title">POP</h1>
+                            <button class="read-more">Read More</button>
+                        </div>
+                            
+                        <div class="album-grid">
+                            <div class="album-card" onclick="goToDetail('1')">
+                                <img src="../assets/Cover Music/Pop/she will be loved cover.png" alt="Album Cover" class="album-cover">
+                                <p class="album-title">She Will Be Loved</p>
+                                <p class="album-artist">Maroon 5</p>
+                                <p class="album-explanation">A romantic song with a soft melody that talks about sacrifice for love.</p>
+                            </div>
+                            
+                            <div class="album-card" onclick="goToDetail('1')">
+                                <img src="../assets/Cover Music/Pop/blinding lights cover.png" alt="Album Cover" class="album-cover">
+                                <p class="album-title">Blinding Lights</p>
+                                <p class="album-artist">The Weekend</p>
+                                <p class="album-explanation">An energetic synthwave song with retro vibes about longing and obsession.</p>
+                            </div>
+                            
+                            <div class="album-card" onclick="goToDetail('1')">
+                                <img src="../assets/Cover Music/Pop/dandelion cover.jpg" alt="Album Cover" class="album-cover">
+                                <p class="album-title">Dandelions</p>
+                                <p class="album-artist">Ruth B.</p>
+                                <p class="album-explanation">A catchy indie ballad about the simple, sincere hope of love.</p>
+                            </div>
+                            
+                            <div class="album-card" onclick="goToDetail('1')">
+                                <img src="../assets/Cover Music/Pop/santa tell me cover.png" alt="Album Cover" class="album-cover">
+                                <p class="album-title">Santa Tell Me</p>
+                                <p class="album-artist">Ariana Grande</p>
+                                <p class="album-explanation">A cheerful Christmas song that talks about doubts about love during the holiday season.</p>
+                            </div>
+                            
+                            <div class="album-card" onclick="goToDetail('1')">
+                                <img src="../assets/Cover Music/Pop/vintage cover.jpg" alt="Album Cover" class="album-cover">
+                                <p class="album-title">Vintage</p>
+                                <p class="album-artist">NIKI</p>
+                                <p class="album-explanation">A nostalgic song with lyrics about missing romantic moments from the past.</p>
                             </div>
                         </div>
-                        
+                    </div>
 
-                            <div class="album-grid">
-                                <div class="album-card">
-                                    <img src="../assets/Cover Music/Home/get weird - little mix.png" alt="">
-                                    <p class="album-title">Get Weird</p>
-                                    <p class="album-artist">Little Mix</p>
-                                </div>
-        
-                                <div class="album-card">
-                                    <img src="../assets/Cover Music/Home/teenage dream - katy perry.jpg" alt="">
-                                    <p class="album-title">Teenage Dream</p>
-                                    <p class="album-artist">Katy Perry</p>
-                                </div>
-        
-                                <div class="album-card">
-                                    <img src="../assets/Cover Music/Home/twilight - boa.jpg" alt="">
-                                    <p class="album-title">Twilight</p>
-                                    <p class="album-artist">Boa</p>
-                                </div>
-        
-        
-                                <div class="album-card">
-                                    <img src="../assets/Cover Music/Home/red pill blues - maroon 5.png" alt="">
-                                    <p class="album-title">Red Pill Blues</p>
-                                    <p class="album-artist">Maroon 5</p>
-                                </div>
-        
-                                <div class="album-card">
-                                    <img src="../assets/Cover Music/Home/lover - taylor swift.jpg" alt="">
-                                    <p class="album-title">Lover</p>
-                                    <p class="album-artist">Taylor Swift</p>
-                                </div>
-        
-                                <div class="album-card">
-                                    <img src="../assets/Cover Music/Home/encore - dj snake.jpg" alt="">
-                                    <p class="album-title">Encore</p>
-                                    <p class="album-artist">DJ Snake</p>
-                                </div>
-        
-                                <div class="album-card">
-                                    <img src="../assets/Cover Music/Home/blue - jonas blue.png" alt="">
-                                    <p class="album-title">Blue</p>
-                                    <p class="album-artist">Jonas Blue</p>
-                                </div>
-        
-                                <div class="album-card">
-                                    <img src="../assets/Cover Music/Home/doo-wops & hooligans - bruno mars.jpg" alt="">
-                                    <p class="album-title">Doo-Wops & Hooligans</p>
-                                    <p class="album-artist">Bruno Mars</p>
-                                </div>
-        
-                                <div class="album-card">
-                                    <img src="../assets/Cover Music/Home/take me home - one direction.jpg" alt="">
-                                    <p class="album-title">Take Me Home</p>
-                                    <p class="album-artist">One Direction</p>
-                                </div>
-        
-                                <div class="album-card">
-                                    <img src="../assets/Cover Music/Home/the aviary - galantis.jpg" alt="">
-                                    <p class="album-title">The Aviary</p>
-                                    <p class="album-artist">Galantis</p>
-                                </div>                          
-                            </div>
-                        
-                        
-                        <div class="quick-picks-header">
-                            <h1>Quick Picks</h1>
-                            <button class="play-all">Play All</button>
+                    <div class="genre-container">
+                        <div class="genre-header">
+                            <h1 class="genre-title">R&B</h1>
+                            <button class="read-more">Read More</button>
                         </div>
-    
-                        <div class="song-lists-container">
-                            <div class="song-column">
-                                <div class="song-item">
-                                    <img src="../assets/Cover Music/Quick Picks/you and me - jennie.jpg" alt="">
-                                    <div class="song-detail">
-                                        <p class="song-title">You & Me</p>
-                                        <p class="song-artist">JENNIE</p>
-                                    </div>
-                                </div>
-    
-                                <div class="song-item">
-                                    <img src="../assets/Cover Music/Quick Picks/diet pepsi - addison rae.jpg" alt="">
-                                    <div class="song-detail">
-                                        <p class="song-title">Diet Pepsi</p>
-                                        <p class="song-artist">Addison Rae</p>
-                                    </div>
-                                </div>
-    
-                                <div class="song-item">
-                                    <img src="../assets/Cover Music/Quick Picks/8 letters - why don't we.jpg" alt="">
-                                    <div class="song-detail">
-                                        <p class="song-title">8 Letters</p>
-                                        <p class="song-artist">Why Don't We</p>
-                                    </div>
-                                </div>
+                            
+                        <div class="album-grid">
+                            <div class="album-card" onclick="goToDetail('1')">
+                                <img src="../assets/Cover Music/R&B/young dumb and broke cover.jpg" alt="Album Cover" class="album-cover">
+                                <p class="album-title">Young Dumb & Broke</p>
+                                <p class="album-artist">Khalid</p>
+                                <p class="album-explanation">A laid-back song about the freedom and simplicity of youth.</p>
                             </div>
-    
-                            <div class="song-column">
-                                <div class="song-item">
-                                    <img src="../assets/Cover Music/Quick Picks/linger - the cranberries.jpg" alt="">
-                                    <div class="song-detail">
-                                        <p class="song-title">Linger</p>
-                                        <p class="song-artist">The Cranberries</p>
-                                    </div>
-                                </div>
-    
-                                <div class="song-item">
-                                    <img src="../assets/Cover Music/Quick Picks/don't wanna cry - seventeen.jpg" alt="">
-                                    <div class="song-detail">
-                                        <p class="song-title">Don't Wanna Cry</p>
-                                        <p class="song-artist">SEVENTEEN</p>
-                                    </div>
-                                </div>
-    
-                                <div class="song-item">
-                                    <img src="../assets/Cover Music/Quick Picks/apt. - rose & bruno mars.jpg" alt="">
-                                    <div class="song-detail">
-                                        <p class="song-title">APT.</p>
-                                        <p class="song-artist">ROSE & Bruno Mars</p>
-                                    </div>
-                                </div>
+                            
+                            <div class="album-card" onclick="goToDetail('1')">
+                                <img src="../assets/Cover Music/R&B/right now cover.jpg" alt="Album Cover" class="album-cover">
+                                <p class="album-title">Right Now (Na Na Na)</p>
+                                <p class="album-artist">Akon</p>
+                                <p class="album-explanation">An upbeat hip-hop song about living in the moment and letting go of the past.</p>
                             </div>
-    
-                            <div class="song-column">
-                                <div class="song-item">
-                                    <img src="../assets/Cover Music/Quick Picks/uptown girl - westlife.jpg" alt="">
-                                    <div class="song-detail">
-                                        <p class="song-title">Uptown Girl</p>
-                                        <p class="song-artist">Westlife</p>
-                                    </div>
-                                </div>
-    
-                                <div class="song-item">
-                                    <img src="../assets/Cover Music/Quick Picks/perfect - one direction.jpg" alt="">
-                                    <div class="song-detail">
-                                        <p class="song-title">Perfect</p>
-                                        <p class="song-artist">One Direction</p>
-                                    </div>
-                                </div>
-    
-                                <div class="song-item">
-                                    <img src="../assets/Cover Music/Quick Picks/paradise - exo.jpg" alt="">
-                                    <div class="song-detail">
-                                        <p class="song-title">Paradise</p>
-                                        <p class="song-artist">EXO</p>
-                                    </div>
-                                </div>
+                            
+                            <div class="album-card" onclick="goToDetail('1')">
+                                <img src="../assets/Cover Music/R&B/sure thing cover.jpg" alt="Album Cover" class="album-cover">
+                                <p class="album-title">Sure Thing</p>
+                                <p class="album-artist">Miguel</p>
+                                <p class="album-explanation">A sensual R&B song that affirms unconditional love.</p>
+                            </div>
+                            
+                            <div class="album-card" onclick="goToDetail('1')">
+                                <img src="../assets/Cover Music/R&B/lets groove cover.jpg" alt="Album Cover" class="album-cover">
+                                <p class="album-title">Let's Groove</p>
+                                <p class="album-artist">Earth, Wind & Fire</p>
+                                <p class="album-explanation">An iconic funk/disco song that gets everyone dancing.</p>
+                            </div>
+                            
+                            <div class="album-card" onclick="goToDetail('1')">
+                                <img src="../assets/Cover Music/R&B/because of you cover.jpg" alt="Album Cover" class="album-cover">
+                                <p class="album-title">Because of You</p>
+                                <p class="album-artist">Ne-Yo</p>
+                                <p class="album-explanation">A romantic R&B song about how love changes one's life.</p>
                             </div>
                         </div>
-                    </div>             
+                    </div>
+
+                    <div class="genre-container">
+                        <div class="genre-header">
+                            <h1 class="genre-title">K-Pop</h1>
+                            <button class="read-more">Read More</button>
+                        </div>
+                            
+                        <div class="album-grid">
+                            <div class="album-card" onclick="goToSongDetail('1')">
+                                <img src="../assets/Cover Music/Kpop/dont wanna cry cover.jpg" alt="Album Cover" class="album-cover">
+                                <p class="album-title">Don't Wanna Cry</p>
+                                <p class="album-artist">SEVENTEEN</p>
+                                <p class="album-explanation">An emotional K-pop song with a powerful dance that expresses the sadness of heartbreak.</p>
+                            </div>
+                            
+                            <div class="album-card" onclick="goToDetail('1')">
+                                <img src="../assets/Cover Music/Kpop/you are cover.jpg" alt="Album Cover" class="album-cover">
+                                <p class="album-title">You Are</p>
+                                <p class="album-artist">GOT7</p>
+                                <p class="album-explanation">An energetic K-pop song with an uplifting message for listeners.</p>
+                            </div>
+                            
+                            <div class="album-card" onclick="goToDetail('1')">
+                                <img src="../assets/Cover Music/Kpop/the eve cover.jpg" alt="Album Cover" class="album-cover">
+                                <p class="album-title">The Eve</p>
+                                <p class="album-artist">EXO</p>
+                                <p class="album-explanation">A song with a dark atmosphere and a mysterious vibe that captivates.</p>
+                            </div>
+                            
+                            <div class="album-card" onclick="goToDetail('1')">
+                                <img src="../assets/Cover Music/Kpop/dance the night away cover.jpg" alt="Album Cover" class="album-cover">
+                                <p class="album-title">Dance the Night Away</p>
+                                <p class="album-artist">TWICE</p>
+                                <p class="album-explanation">A cheerful and upbeat song perfect for summer parties.</p>
+                            </div>
+                            
+                            <div class="album-card" onclick="goToDetail('1')">
+                                <img src="../assets/Cover Music/Kpop/lovesick girls cover.png" alt="Album Cover" class="album-cover">
+                                <p class="album-title">Lovesick Girls</p>
+                                <p class="album-artist">BLACKPINK</p>
+                                <p class="album-explanation">A pop-EDM song about heartbreak but staying strong and confident.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
+                
             </div>
+            
+        </div>
         </div>        
     </div>
 
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/home.js"></script>
+    <script src="../js/song-collection.js"></script>
 </body>
 </html>
