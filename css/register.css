@@ -1,112 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sushi Bite</title>
-    <link rel="stylesheet" href="../css/register.css">
-</head>
-<body>
-    <div class="container">
-        <div class="content-container">
-            <div class="content">
-                <img id="logo" src="../assets/logo sushi bite (1).png" alt="">
-                <form class="register-form-container" action="home.html">
-                    <div class="form-container">
-                        <div class="field-container">
-                            <p class="field-type">Username</p>
-                            <input class="field" type="text" id="username">
-                            <div class="error-message" id="username-error"></div>              
-                        </div>
-        
-                        <div class="field-container">
-                            <p class="field-type">Email</p>
-                            <input class="field" type="text" id="email">
-                            <div class="error-message" id="email-error"></div>              
-                        </div>
-        
-                        <div class="field-container">
-                            <p class="field-type">Password</p>
-                            <input class="field" type="password" id="password">
-                            <div class="error-message" id="password-error"></div>              
-                        </div>
-            
-                        <div class="field-container">
-                            <p class="field-type">Age</p>
-                            <input class="field" type="number" id="age">
-                            <div class="error-message" id="age-error"></div>              
-                        </div>
-                    </div>
-
-                    <div class="gender-container">
-                        <p>Gender</p>
-                        <div class="group-radio-button-container">
-                            <div class="radio-button-container">
-                                <input type="radio" name="gender" id="male" value="male">
-                                <label for="male">Male</label>
-                            </div>
-    
-                            <div class="radio-button-container">
-                                <input type="radio" name="gender" id="female" value="female">
-                                <label for="female">Female</label>
-                            </div>
-                        </div>
-                        <div class="error-message" id="gender-error"></div>         
-                    </div>
-
-                    <button class="register-button" id="register-button">
-                        REGISTER
-                    </button>
-                </form>
-
-                <div class="line-container">
-                    <div class="line"></div>
-                    <div class="text">OR</div>
-                    <div class="line"></div>
-                </div>
-
-                <div class="button-container">
-                    <button class="sign-in-button">
-                        <img id="google" src="../assets/logo google.png" alt="">
-                        Sign in with Google    
-                    </button>
-                    
-                    <button class="sign-in-button">
-                        <img id="facebook" src="../assets/logo facebook.png" alt="">
-                        Sign in with Facebook  
-                    </button>
-                    
-                    <button class="sign-in-button">
-                        <img id="apple" src="../assets/logo apple.png" alt="">
-                        Sign in with Apple                     
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="../js/register.js"></script>
-</body>
-</html>
-
 *{
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #222;
-=======
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-    background-image: url(../assets/background\ \(1\).jpg);
-    background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
->>>>>>> 61eaee7dc66b1449fbf9dd27ad4adb616baa1cc1
+    background-size: cover;
 }
 
 #logo{
@@ -148,7 +49,7 @@ body {
     gap: 20px;
     width: 100%;
     max-width: 350px;
-    background: white;
+    background: #FAF7F0;
     padding: 40px 20px 20px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -178,7 +79,7 @@ body {
 }
 
 .field-type {
-    color: #333;
+    color: black;
     font-size: 14px;
     margin-bottom: 5px;
 }
@@ -186,21 +87,16 @@ body {
 .field {
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid #DDD;
     background-color: white;
-    color: #333;
+    color: black;
     font-size: 14px;
     width: 100%;
 }
 
-.field:focus {
-    outline: none;
-    border-color: rgb(0, 31, 63);
-}
-
-.error-message {
+.error-message{
     color: red;
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 3px;
     min-height: 14px;
 }
@@ -208,10 +104,9 @@ body {
 .field.invalid{
     border-color: red;
     border-width: 1px;
-    background-color: white;
 }
 
-.gender-container {
+.gender-container{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -220,10 +115,9 @@ body {
     margin: 10px 0;
 }
 
-.gender-container p {
-    color: #333;
+.gender-container p{
+    color: black;
     font-size: 14px;
-    margin: 3px 0;
 }
 
 .radio-button-container{
@@ -234,21 +128,17 @@ body {
 
 .radio-button-container label{
     background-color: white;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .group-radio-button-container{
     display: flex;
-    gap: 24px;
+    gap: 10px;
 }
 
 .register-button{
-<<<<<<< HEAD
-    padding: 6px 18px;
-=======
     padding: 10px;
->>>>>>> 61eaee7dc66b1449fbf9dd27ad4adb616baa1cc1
-    background-color: rgb(0, 31, 63);
+    background-color: #854836;
     border: none;
     border-radius: 10px;
     color: white;
@@ -260,76 +150,8 @@ body {
 }
 
 .register-button:hover{
-    background-color: rgb(239, 232, 232);
-    color: rgb(0, 31, 63);
+    background-color: #E6D5B8;
+    color: #854836;
     transition: background 0,2s;
     transform: 0.2s;
-}
-
-.line-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 8px 0;
-}
-
-.line {
-    flex: 1;
-    height: 1px;
-    background-color: #ddd;
-}
-
-.text {
-    color: #666;
-    font-size: 12px;
-    padding: 0 10px;
-}
-
-.button-container{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-}
-
-.sign-in-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(0, 31, 63);
-    color: white;
-    font-size: 14px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    gap: 10px;
-    padding: 10px;
-    transition: all 0.3s ease;
-    width: 100%;
-}
-
-.sign-in-button:hover {
-    background-color: #d8ccba;
-    color: rgb(0, 31, 63);
-}
-
-#google{
-    width: 20px;
-    height: 20px;
-    border: none;
-    background: none; 
-}
-
-#facebook{
-    width: 20px;
-    height: 20px;
-    border: none;
-    background: none;
-}
-
-#apple{
-    width: 20px;
-    height: 20px;
-    border: none;
-    background: none;
 }
