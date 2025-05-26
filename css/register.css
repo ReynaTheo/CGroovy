@@ -1,8 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #222;
 }
 
 body {
@@ -63,6 +64,7 @@ body {
     gap: 10px;
     width: 100%;
     margin-top: 10px;
+    background-color: white;
 }
 
 .form-container {
@@ -70,18 +72,21 @@ body {
     flex-direction: column;
     width: 100%;
     gap: 15px;
+    background-color: white;
 }
 
 .field-container {
     display: flex;
     flex-direction: column;
     width: 100%;
+    background-color: white;
 }
 
 .field-type {
     color: black;
     font-size: 14px;
     margin-bottom: 5px;
+    background-color: #fff;
 }
 
 .field {
@@ -99,6 +104,7 @@ body {
     font-size: 14px;
     margin-top: 3px;
     min-height: 14px;
+    background-color: #fff;
 }
 
 .field.invalid{
@@ -113,17 +119,20 @@ body {
     gap: 8px;
     width: 100%;
     margin: 10px 0;
+    background-color: white;
 }
 
 .gender-container p{
     color: black;
     font-size: 14px;
+    background-color: white;
 }
 
 .radio-button-container{
     display: flex;
     justify-content: center;
     gap: 5px;
+    background-color: white;
 }
 
 .radio-button-container label{
@@ -134,11 +143,12 @@ body {
 .group-radio-button-container{
     display: flex;
     gap: 10px;
+    background-color: white;
 }
 
 .register-button{
     padding: 10px;
-    background-color: #854836;
+    background-color: #222 ;
     border: none;
     border-radius: 10px;
     color: white;
@@ -150,8 +160,8 @@ body {
 }
 
 .register-button:hover{
-    background-color: #E6D5B8;
-    color: #854836;
+    background-color: #555454;
+    color: white;
     transition: background 0,2s;
     transform: 0.2s;
 }
