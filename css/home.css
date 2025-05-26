@@ -7,125 +7,145 @@
 
 }
 
-.container{
-    /* background-color: rgb(0, 31, 63); */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-    
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #222;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    }
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
+.content{
+  display: flex;
+  background-color: #222;
+}
+
+.navbar {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
     
-
-    .navbar {
-      background-color: #333;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 20px;
-    
-
-      img{
-        width: 100px;
-        height: auto;
-        background-color: #333;
-      }
-
-    }
+}
+.navbar img{
+  width: 100px;
+  height: auto;
+  background-color: #333;
+}
    
-    .logo{
-        display: flex;
-        gap: 80px;
-        background-color: #333;
-    }
+.logo{
+  display: flex;
+  gap: 80px;
+  background-color: #333;
+}
 
+.nav-right{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: #333;
 
-    .nav-right{
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        background-color: #333;
-        
-        .menu-icon{
-            margin-top: -5px;
-        }
-    }
+  .menu-icon{
+    margin-top: -5px;
+  }
+}
 
-    .nav-links {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      background-color: #333;
-    }
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: #333;
+}
 
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      background-color: #333;
-      
-    }
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  background-color: #333;
+}
 
-    .menu-icon {
-      font-size: 26px;
-      color: white;
-      cursor: pointer;
-      background-color: #333;
-    }
+.menu-icon {
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  background-color: #333;
+}
 
-    .dropdown {
-      display: none;
-      flex-direction: column;
-      background-color: #444;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      z-index: 99;
-    }
+.dropdown {
+  display: none;
+  flex-direction: column;
+  background-color: #444;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  z-index: 99;
+}
 
-    .dropdown a {
-      padding: 12px 16px;
-      color: white;
-      text-decoration: none;
-      border-top: 1px solid #555;
-    }
+.dropdown a {
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+  border-top: 1px solid #555;
+}
 
-    .dropdown a:hover {
-      background-color: #555;
-    }
+.dropdown a:hover {
+  background-color: #555;
+}
+ 
+.mobile-menu {
+  display: none;
+}
 
-    /* Hide mobile-only items by default */
-    .mobile-menu {
-      display: none;
-    }
+form{
+  background-color: #333;
+}
 
-    /* === Responsive === */
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-      
-       .menu-icon {
-        display: block; /* Tampilkan icon menu */
-      }
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  background-color: #333;
+  border-radius: 5px;
+}
 
-      .mobile-menu {
-        display: block;
-      }
-    }
+.search-container input[type="text"] {
+  width: 100%;
+  padding: 8px 40px 8px 10px; /* ruang untuk icon di kanan */
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: white;
+}
 
-/* PLAYLIST */
+.search-container button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  
+}
+
+.search-container button img {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+
+}
 .playlist-container{  
     background-color: #2a2a2a;
     flex: 0 0 auto;
@@ -159,10 +179,6 @@ body {
   background: #555;
 }
 
-.content{
-    display: flex;
-    background-color: #222;
-}
 
 .content-playlist{
     background-color: #2a2a2a;
@@ -222,8 +238,6 @@ body {
     background: none;
 }
 
-
-/* HOME CONTAINER */
 .home-container{
     flex: 1;
     padding: 20px;
@@ -231,49 +245,6 @@ body {
     min-height: calc(100vh - 64px);
     width: 100%;
 }
-
-form{
-  background-color: #333;
-}
-
-
-.search-container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  margin: 10px auto;
-  background-color: #333;
-  border-radius: 5px;
-}
-
-.search-container input[type="text"] {
-  width: 100%;
-  padding: 8px 40px 8px 10px; /* ruang untuk icon di kanan */
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  font-size: 14px;
-  background-color: white;
-}
-
-.search-container button {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  
-}
-
-.search-container button img {
-  width: 20px;
-  height: 20px;
-  background-color: white;
-
-}
-
 
 .nav-bar-genre{
     width: 100%;
@@ -331,11 +302,8 @@ form{
     padding: 0;
     position: relative;
     h1{
-      /* font-size: clamp(1rem, calc(7vw + 1rem), 1rem); */
       font-size: 30px;
-    }
-    /* max-width: 940px; */
-    
+    }    
 }
 
 .album-navigation{
@@ -413,8 +381,6 @@ form{
     display: block;
     flex: 0 0 180px; 
     scroll-snap-align: start;
-    /* min-width: 160px;
-    max-width: 200px;  */
 }
 
 .album-card:hover {
@@ -423,12 +389,6 @@ form{
 }
 
 .album-card img{
-    /* width: 100%;
-    aspect-ratio: 1/1;
-    height: 200px;
-    object-fit: cover;
-    display: block; */
-
     width: 100%;
     height: 180px;
     object-fit: cover;
@@ -448,8 +408,6 @@ form{
     color: #333;
     font-size: 1rem;
     padding: 0px 20px;
-    
-    
 }
 
 .album-artist{
@@ -467,15 +425,12 @@ form{
     padding: 0;
     margin: 30px 0 15px 0;
     font-size: clamp(1rem, calc(7vw + 1rem), 1rem);
-
-    
   }
 
   .quick-picks-header h1{
     color: white;
     text-transform: uppercase;
     font-size: 35px;
-    
   }
 
  
@@ -500,7 +455,6 @@ form{
     margin-top: 15px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* grid-template-rows: repeat(3, auto); */
     gap: 15px;
     width: 100%;
     padding: 0;
@@ -511,7 +465,7 @@ form{
 }
 
 .song-detail {
-    min-width: 0; /* Penting untuk text truncation */
+    min-width: 0;
     overflow: hidden;
     background-color: white;
 }
@@ -522,9 +476,7 @@ form{
 .song-title, .song-artist {
     white-space: nowrap;
     overflow: hidden;
-    /* text-overflow: ellipsis; */
 }
-
 
 .song-item{
     display: flex;
@@ -581,6 +533,7 @@ form{
   }
 
 
+
  @media (max-width: 768px) {
   .search-container {
     max-width: 90%;
@@ -604,11 +557,11 @@ form{
   }
 
   .menu-icon {
+    display: block; 
     margin-left: auto;
   }
 
   .quick-picks-header{
-    /* max-width: fit-content; */
     gap: 25px;
     margin-top: 20px;
     display: flex;
@@ -703,9 +656,9 @@ form{
   }
 
   .album-grid {
-    display: flex !important; /* Pastikan tetap flex di mobile */
-        grid-template-columns: unset; /* Hapus properti grid */
-        width: max-content; /* Lebar mengikuti content */
+    display: flex !important; 
+        grid-template-columns: unset;
+        width: max-content; 
         min-width: 100%;
         gap: 10px;
         padding-bottom: 15px;
@@ -713,7 +666,7 @@ form{
 
   .album-card {
      flex: 0 0 140px;
-        width: 140px !important; /* Override width 100% */
+        width: 140px !important; 
         scroll-snap-align: start;
   }
 
