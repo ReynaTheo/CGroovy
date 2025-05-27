@@ -9,7 +9,6 @@ function toggleDropdown() {
       menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
     }
 
-    // Optional: tutup dropdown saat resize ke besar
     window.addEventListener("resize", () => {
       if (window.innerWidth > 768) {
         document.getElementById("menuDropdown").style.display = "none";

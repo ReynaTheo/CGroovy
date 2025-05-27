@@ -121,7 +121,7 @@ form{
 
 .search-container input[type="text"] {
   width: 100%;
-  padding: 8px 40px 8px 10px; /* ruang untuk icon di kanan */
+  padding: 8px 40px 8px 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
   font-size: 14px;
@@ -239,6 +239,9 @@ form{
 }
 
 .home-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
     flex: 1;
     padding: 20px;
     overflow-y: auto;
@@ -287,7 +290,6 @@ form{
 
 .album-container{
     width: 100%;
-    /* overflow: hidden; */
     position: relative;
     margin-bottom: 2rem;
     padding: 0 20px;

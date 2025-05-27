@@ -20,7 +20,7 @@ document.querySelectorAll('.founder-cards-content').forEach(header => {
     const icon = header.querySelector('#dropdown-icon');
 
     body.classList.toggle('active');
-    icon.classList.toggle('rotated'); // Tambahkan class untuk rotasi
+    icon.classList.toggle('rotated');
   });
 });
 
@@ -28,8 +28,6 @@ function toggleDropdown() {
       const menu = document.getElementById("menuDropdown");
       menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
     }
-
-    // Optional: tutup dropdown saat resize ke besar
     window.addEventListener("resize", () => {
       if (window.innerWidth > 768) {
         document.getElementById("menuDropdown").style.display = "none";
