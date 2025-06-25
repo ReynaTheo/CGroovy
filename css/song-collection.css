@@ -370,7 +370,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 810px) {
   .search-container {
     max-width: 90%;
   }
