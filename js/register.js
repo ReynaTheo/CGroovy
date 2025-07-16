@@ -104,7 +104,7 @@ registerButton.addEventListener('click', function(e){
         alert('Registration Successful!');
         
         setTimeout(() => {
-            window.location.href = 'home.html';
+            window.location.href = './html/home.html';
         }, 1000);
     }else{
         alert('Registration Failed! Please check your data again.');
